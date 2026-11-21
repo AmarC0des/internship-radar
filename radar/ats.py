@@ -21,6 +21,7 @@ from .http import extract_js_object, get_json, get_text, post_json
 from .models import Job
 
 INTERN_SEARCH = ["intern", "co-op"]
+DETECT_VERSION = 2  # bump when detection logic changes so cached boards get re-checked
 INTERN_RE = re.compile(r"\b(intern|interns|internship|internships|co-?op|coop)\b", re.I)
 
 # --------------------------------------------------------------------------
@@ -53,8 +54,14 @@ SIGNATURES = [
     ("jobvite", re.compile(r"https?://jobs\.jobvite\.com/[\w-]+[^\"' <]*", re.I)),
     ("jazzhr", re.compile(r"https?://[\w-]+\.applytojob\.com/apply[^\"' <]*", re.I)),
     ("taleo", re.compile(r"https?://[\w-]+\.taleo\.net/careersection/[^\"' <]+", re.I)),
+    ("applicantstack", re.compile(r"https?://[\w-]+\.applicantstack\.com/x/openings", re.I)),
+    ("silkroad", re.compile(r"https?://jobs\.silkroad\.com/[\w-]+/[\w-]+", re.I)),
 ]
-PAGE_SCAN_ATS = {"paycom", "hirebridge", "dayforce", "jobvite", "jazzhr", "taleo"}
+PAGE_SCAN_ATS = {"paycom", "hirebridge", "dayforce", "jobvite", "jazzhr", "taleo", "applicantstack", "silkroad"}
+# Paths on ATS domains that are not company boards.
+RESERVED_SLUGS = {"embed", "js", "v1", "my-applications", "web-sso", "widget", "sr-jobs", "jobs", "careers",
+                  "api", "static", "assets", "en", "privacy", "cookie-policy"}
+BAD_ICIMS_HOSTS = re.compile(r"^(www|static|cookie-policy-scripts|assets|cdn|developer|community|help|login)\.", re.I)
 
 CAREER_LINK_RE = re.compile(
     r"career|jobs?\b|employment|join[-_ ]?(our[-_ ])?team|work[-_ ](with|for)[-_ ]us|opportunit|openings|hiring|internship",
@@ -72,11 +79,14 @@ def match_ats(url: str, html: str) -> dict | None:
         g = m.groups()
         if name == "workday":
             return {"ats": "workday", "host": f"{g[0]}.{g[1]}.myworkdayjobs.com", "tenant": g[0], "site": g[2]}
-        if name == "greenhouse":
-            if g[0].lower() in {"embed", "js", "v1"}:
+        if name in ("greenhouse", "lever", "ashby", "smartrecruiters", "bamboohr", "recruitee", "breezy",
+                    "workable", "pinpoint"):
+            if g[0].lower() in RESERVED_SLUGS:
+                # e.g. jobs.smartrecruiters.com/my-applications/<Company> — look for the real slug
+                m2 = re.search(r"smartrecruiters\.com/(?:my-applications|web-sso/saml)/([\w-]+)", blob) if name == "smartrecruiters" else None
+                if m2:
+                    return {"ats": "smartrecruiters", "slug": m2.group(1)}
                 continue
-            return {"ats": "greenhouse", "slug": g[0]}
-        if name in ("lever", "ashby", "smartrecruiters", "bamboohr", "recruitee", "breezy", "workable", "pinpoint"):
             return {"ats": name, "slug": g[0]}
         if name == "ukg":
             return {"ats": "ukg", "board": f"https://{g[0]}/{g[1]}/JobBoard/{g[2]}"}
@@ -86,7 +96,7 @@ def match_ats(url: str, html: str) -> dict | None:
             return {"ats": "adp", "cid": g[0]}
         if name == "icims":
             host = g[0].lower()
-            if host in {"www.icims.com", "icims.com"}:
+            if host == "icims.com" or BAD_ICIMS_HOSTS.match(host):
                 continue
             return {"ats": "icims", "host": host}
         if name == "oracle":
@@ -98,9 +108,13 @@ def match_ats(url: str, html: str) -> dict | None:
     # Hosted career sites that sit on the company's own domain.
     if "phApp.ddo" in html or "phenompeople" in html:
         p = urlparse(url)
-        loc = re.match(r"/([a-z]{2,6})/([a-z]{2})(?:/|$)", p.path)
-        prefix = f"/{loc.group(1)}/{loc.group(2)}" if loc else ""
+        loc = re.match(r"(.*?/[a-z]{2,6}/[a-z]{2})(?:/|$)", p.path)
+        prefix = loc.group(1) if loc else ""
         return {"ats": "phenom", "base": f"{p.scheme}://{p.netloc}{prefix}"}
+    oc = re.search(r"https?://([\w-]+\.fa(?:\.[\w-]+)?\.oraclecloud\.com)", html)
+    site = re.search(r"/sites/([\w-]+)", url)
+    if oc and site:  # Oracle Recruiting on a custom domain, e.g. careers.honeywell.com/en/sites/Honeywell
+        return {"ats": "oracle", "host": oc.group(1), "site": site.group(1)}
     if "/careers-home" in blob and ("jibe" in html.lower() or "careers-home" in url):
         p = urlparse(url)
         return {"ats": "jibe", "origin": f"{p.scheme}://{p.netloc}"}
@@ -158,6 +172,9 @@ def detect(session, company: dict, max_fetches: int = 10) -> dict:
     if not start.startswith("http"):
         start = "https://" + start
     queue, visited, fetches = [(start, 0)], set(), 0
+    host = urlparse(start).netloc
+    if not company.get("careers") and not host.startswith("www."):
+        queue.append((start.replace("://" + host, "://www." + host, 1), 0))  # bare domains sometimes don't resolve
     best_page = None
     last_err = ""
     while queue and fetches < max_fetches:
@@ -177,6 +194,8 @@ def detect(session, company: dict, max_fetches: int = 10) -> dict:
             last_err = f"{type(e).__name__}: {str(e)[:120]}"
             fetches += 1
             continue
+        if depth == 0 and len(queue) and queue[0][1] == 0:
+            queue.pop(0)  # bare domain worked; skip the www. variant
         hit = match_ats(final, html)
         if hit:
             hit["careers_url"] = final
@@ -284,15 +303,30 @@ def fetch_workday(s, name, p):
 
 
 def fetch_phenom(s, name, p):
+    """Phenom career sites. The page HTML ignores ?keywords= without a browser session,
+    so use the site's own search API (POST /widgets, ddoKey=refineSearch)."""
+    u = urlparse(p["base"])
+    origin = f"{u.scheme}://{u.netloc}"
+    loc = re.search(r"/([a-z]{2,6})/([a-z]{2})$", u.path)
+    country, lang = (loc.group(1), loc.group(2)) if loc else ("us", "en")
+    api = origin + (u.path[: loc.start()] if loc else u.path.rstrip("/")) + "/widgets"
     out, seen = [], set()
     for q in INTERN_SEARCH:
         frm, dry = 0, 0
-        while frm < 250:
-            _, html = get_text(s, f"{p['base']}/search-results?keywords={quote(q)}&from={frm}&s=1")
-            ddo = extract_js_object(html, "phApp.ddo") or {}
-            r = ddo.get("eagerLoadRefineSearch") or {}
+        while frm < 400:
+            body = {"lang": f"{lang}_{country}", "deviceType": "desktop", "country": country,
+                    "pageName": "search-results", "ddoKey": "refineSearch", "sortBy": "", "subsearch": "",
+                    "from": frm, "jobs": True, "counts": True, "all_fields": ["category", "country", "state", "city", "type"],
+                    "size": 50, "clearAll": False, "jdsource": "facets", "isSliderEnable": False,
+                    "pageId": "page20", "siteType": "external", "keywords": q, "global": True,
+                    "selected_fields": {}, "locationData": {}}
+            d = post_json(s, api, body, headers={"Referer": p["base"] + "/search-results", "Origin": origin})
+            r = d.get("refineSearch") or {}
             jobs = (r.get("data") or {}).get("jobs") or []
+            hit = False
             for j in jobs:
+                if INTERN_RE.search(j.get("title", "")):
+                    hit = True
                 jid = str(j.get("jobId") or j.get("reqId"))
                 if jid in seen:
                     continue
@@ -301,8 +335,8 @@ def fetch_phenom(s, name, p):
                 out.append(Job(name, j.get("title", ""), "; ".join(locs), f"{p['base']}/job/{jid}", "phenom",
                                _date(j.get("postedDate")), remote=bool(re.search(r"remote", json.dumps(locs), re.I))))
             frm += len(jobs)
-            dry = 0 if any(INTERN_RE.search(j.get("title", "")) for j in jobs) else dry + 1
-            if not jobs or frm >= (r.get("totalHits") or 0) or dry >= 3:
+            dry = 0 if hit else dry + 1
+            if len(jobs) < 50 or frm >= (r.get("totalHits") or 0) or dry >= 2:
                 break
     return out
 
@@ -501,15 +535,22 @@ def fetch_pinpoint(s, name, p):
 def fetch_oracle(s, name, p):
     host, site = p["host"], p["site"]
     out = []
+    seen = set()
     for q in INTERN_SEARCH:
-        url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
-               f"&expand=requisitionList&finder=findReqs;siteNumber={site},keyword={quote(q)},limit=100")
-        d = get_json(s, url)
-        for item in d.get("items", []):
-            for j in item.get("requisitionList") or []:
+        for offset in range(0, 400, 100):
+            url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
+                   f"&expand=requisitionList&finder=findReqs;siteNumber={site},keyword={quote(q)},limit=100,offset={offset}")
+            d = get_json(s, url)
+            reqs = [j for item in d.get("items", []) for j in item.get("requisitionList") or []]
+            for j in reqs:
+                if j["Id"] in seen:
+                    continue
+                seen.add(j["Id"])
                 out.append(Job(name, j.get("Title", ""), j.get("PrimaryLocation", ""),
                                f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{j['Id']}", "oracle",
                                _date(j.get("PostedDate")), remote=bool(re.search("remote", j.get("WorkplaceType") or "", re.I))))
+            if len(reqs) < 100 or not any(INTERN_RE.search(j.get("Title", "")) for j in reqs):
+                break
     return out
 
 

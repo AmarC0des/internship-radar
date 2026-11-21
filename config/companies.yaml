@@ -22,11 +22,11 @@ northern_indiana:
   - {name: AM General, website: amgeneral.com, careers: "https://www.amgeneral.com/careers/"}
   - {name: Beacon Health System, website: beaconhealthsystem.org}
   - {name: Saint Joseph Health System, website: sjmed.com}
-  - {name: Crowe LLP, website: crowe.com}
-  - {name: Honeywell Aerospace, website: honeywell.com, careers: "https://careers.honeywell.com/us/en"}
-  - {name: Everwise Credit Union, website: everwisecu.com}
+  - {name: Crowe LLP, website: crowe.com, ats: phenom, base: "https://careers.crowe.com"}
+  - {name: Honeywell Aerospace, website: honeywell.com, ats: oracle, host: ibqbjb.fa.ocs.oraclecloud.com, site: Honeywell}
+  - {name: Everwise Credit Union, website: everwisecu.com, ats: workday, host: ecu.wd12.myworkdayjobs.com, tenant: ecu, site: Everwise_Careers}
   - {name: Notre Dame FCU, website: ndfcu.org}
-  - {name: University of Notre Dame, website: nd.edu, careers: "https://jobs.nd.edu"}
+  - {name: University of Notre Dame, website: nd.edu, ats: smartrecruiters, slug: UniversityOfNotreDame}
   - {name: Press Ganey, website: pressganey.com}
   - {name: Steel Warehouse, website: steelwarehouse.com}
   - {name: Martin's Super Markets, website: martinsupermarkets.com}
@@ -46,16 +46,16 @@ northern_indiana:
   # --- Elkhart / Goshen / Middlebury / Nappanee ---------------------------
   - {name: Lippert, website: lippert.com, ats: jibe, origin: "https://careers.lippert.com"}
   - {name: MORryde, website: morryde.com, ats: paylocity, guid: a9f9a8d7-7178-4d80-9666-05cb559c5f6f}
-  - {name: Patrick Industries, website: patrickind.com}
+  - {name: Patrick Industries, website: patrickind.com, ats: sf_rmk, origin: "https://careers.patrickind.com"}
   - {name: Thor Industries, website: thorindustries.com}
-  - {name: Forest River, website: forestriverinc.com}
+  - {name: Forest River, website: forestriverinc.com, ats: page, url: "http://forestriverinc.applicantstack.com/x/openings"}
   - {name: Jayco, website: jayco.com}
   - {name: Keystone RV, website: keystonerv.com}
   - {name: Grand Design RV, website: granddesignrv.com}
   - {name: Winnebago Industries (Newmar), website: winnebagoind.com}
   - {name: NIBCO, website: nibco.com, careers: "https://www.nibco.com/careers/"}
   - {name: Elkhart Brass, website: elkhartbrass.com}
-  - {name: Dexter Group, website: dextergroup.com, careers: "https://dextergroup.com/careers"}
+  - {name: Dexter Group, website: dextergroup.com}
   - {name: LaSalle Bristol, website: lasallebristol.com}
   - {name: LEER Group, website: leer.com}
   - {name: Crane Composites, website: cranecomposites.com}
@@ -73,7 +73,6 @@ northern_indiana:
   - {name: Rieth-Riley Construction, website: riethriley.com}
   # --- Plymouth / Marshall / Starke ---------------------------------------
   - {name: Pilgrim's Pride Plymouth, website: pilgrims.com}
-  - {name: Culver Academies, website: culver.org}
   - {name: First Federal Savings Bank (Huntington), website: firstfedhuntington.com}
   # --- Warsaw / Kosciusko -------------------------------------------------
   - {name: Zimmer Biomet, website: zimmerbiomet.com, ats: phenom, base: "https://careers.zimmerbiomet.com/us/en"}
@@ -89,8 +88,8 @@ northern_indiana:
   - {name: Kosciusko Community Hospital (Lutheran), website: kch.com}
   - {name: Grace College, website: grace.edu}
   # --- Fort Wayne / Northeast ---------------------------------------------
-  - {name: Lincoln Financial, website: lincolnfinancial.com}
-  - {name: Sweetwater, website: sweetwater.com, ats: page, url: "https://www.sweetwater.com/careers/openings/technology"}
+  - {name: Lincoln Financial, website: lincolnfinancial.com, ats: sf_rmk, origin: "https://jobs.lincolnfinancial.com"}
+  - {name: Sweetwater, website: sweetwater.com, ats: phenom, base: "https://careers.sweetwater.com/us/en"}
   - {name: Parkview Health, website: parkview.com}
   - {name: Lutheran Health Network, website: lutheranhealth.net}
   - {name: Steel Dynamics, website: steeldynamics.com}
@@ -137,10 +136,10 @@ southwest_michigan:
   - {name: Pfizer Kalamazoo, website: pfizer.com, ats: workday, host: pfizer.wd1.myworkdayjobs.com, tenant: pfizer, site: PfizerCareers}
   - {name: Zoetis, website: zoetis.com, ats: workday, host: zoetis.wd5.myworkdayjobs.com, tenant: zoetis, site: zoetis}
   - {name: Whirlpool Corporation, website: whirlpoolcorp.com}
-  - {name: Kellanova, website: kellanova.com}
+  - {name: Kellanova, website: kellanova.com, careers: "https://www.kellanovacareers.com/"}
   - {name: WK Kellogg Co, website: wkkellogg.com}
   - {name: Post Consumer Brands, website: postconsumerbrands.com}
-  - {name: Bronson Healthcare, website: bronsonhealth.com}
+  - {name: Bronson Healthcare, website: bronsonhealth.com, ats: workday, host: bronsonhg.wd1.myworkdayjobs.com, tenant: bronsonhg, site: newhires}
   - {name: Corewell Health, website: corewellhealth.org}
   - {name: Graphic Packaging, website: graphicpkg.com}
   - {name: Kalsec, website: kalsec.com}
@@ -175,7 +174,7 @@ southwest_michigan:
   - {name: Southwestern Michigan College, website: swmich.edu}
   - {name: Vail Rubber Works, website: vailrubber.com}
   - {name: Michigan Medicine (Ann Arbor), website: uofmhealth.org}
-  - {name: Domino's (Ann Arbor), website: dominos.com, careers: "https://jobs.dominos.com/us/en"}
+  - {name: Domino's (Ann Arbor), website: dominos.com}
 
 chicago_and_national:
   # Bigger Chicago-area employers with internship programs. Their non-Chicago

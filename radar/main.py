@@ -66,6 +66,8 @@ def board_for(company: dict, cache: dict, session, today: dt.date, force: bool) 
         b.setdefault("careers_url", company.get("careers") or company.get("website", ""))
         return {**b, "pinned": True}
     hit = cache.get(company["name"])
+    if hit and hit.get("v") != ats.DETECT_VERSION:
+        hit = None  # detected by an older version of the detector
     if hit and not force:
         age = (today - dt.date.fromisoformat(hit.get("detected", "2000-01-01"))).days
         ok = hit.get("ats") not in ("none", None)
@@ -73,6 +75,7 @@ def board_for(company: dict, cache: dict, session, today: dt.date, force: bool) 
             return hit
     b = ats.detect(session, company)
     b["detected"] = today.isoformat()
+    b["v"] = ats.DETECT_VERSION
     return b
 
 
@@ -109,7 +112,7 @@ def main(argv=None) -> int:
     ap.add_argument("--no-email", action="store_true")
     ap.add_argument("--only", default="")
     ap.add_argument("--redetect", action="store_true")
-    ap.add_argument("--workers", type=int, default=12)
+    ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--skip-aggregators", action="store_true")
     args = ap.parse_args(argv)
 

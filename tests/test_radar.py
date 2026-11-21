@@ -130,14 +130,57 @@ def test_workday():
 
 
 def test_phenom():
-    ddo = {"eagerLoadRefineSearch": {"totalHits": 2, "data": {"jobs": [
+    resp = {"refineSearch": {"totalHits": 2, "data": {"jobs": [
         {"jobId": "12675", "title": "2027 Spring Intern, Connected Health", "cityStateCountry": "Grand Rapids, Michigan, United States", "postedDate": "2026-11-10T00:00:00.000+0000"},
         {"jobId": "13093", "title": "Warehouse Intern", "multi_location": ["Warsaw, Indiana, United States"]}]}}}
-    html = f"<script>phApp.ddo = {json.dumps(ddo)}; phApp.experimentData = {{}};</script>"
-    s = FakeSession([(r"search-results", html)])
+    s = FakeSession([(r"/widgets$", resp)])
     jobs = ats.fetch_phenom(s, "Zimmer Biomet", {"base": "https://careers.zimmerbiomet.com/us/en"})
     assert [j.url for j in jobs] == ["https://careers.zimmerbiomet.com/us/en/job/12675", "https://careers.zimmerbiomet.com/us/en/job/13093"]
     assert jobs[0].posted == "2026-11-10"
+    url, data = s.calls[0]
+    body = json.loads(data)
+    assert url == "https://careers.zimmerbiomet.com/widgets" and body["keywords"] == "intern" and body["lang"] == "en_us"
+    # sites without a locale path (careers.crowe.com) and nested ones (qualtrics.com/careers/us/en)
+    s2 = FakeSession([(r"/widgets$", resp)])
+    ats.fetch_phenom(s2, "Crowe", {"base": "https://careers.crowe.com"})
+    assert s2.calls[0][0] == "https://careers.crowe.com/widgets"
+    assert ats.match_ats("https://www.qualtrics.com/careers/us/en", "phApp.ddo={}")["base"] == "https://www.qualtrics.com/careers/us/en"
+    s3 = FakeSession([(r"/widgets$", resp)])
+    ats.fetch_phenom(s3, "Q", {"base": "https://www.qualtrics.com/careers/us/en"})
+    assert s3.calls[0][0] == "https://www.qualtrics.com/careers/widgets"
+
+
+def test_bad_detections_from_first_run():
+    # Aon: an iCIMS cookie script is not a job board
+    assert ats.match_ats("x", '<script src="https://cookie-policy-scripts.icims.com/x.js">') is None
+    # Notre Dame: a "my applications" link must resolve to the real SmartRecruiters company
+    m = ats.match_ats("x", '<a href="https://jobs.smartrecruiters.com/my-applications/UniversityOfNotreDame?x=1">')
+    assert m == {"ats": "smartrecruiters", "slug": "UniversityOfNotreDame"}
+    # Honeywell: Oracle Recruiting on its own domain
+    m = ats.match_ats("https://careers.honeywell.com/en/sites/Honeywell",
+                      '<script src="https://ibqbjb.fa.ocs.oraclecloud.com:443/hcmUI/CandExpStatic/js/x.js">')
+    assert m == {"ats": "oracle", "host": "ibqbjb.fa.ocs.oraclecloud.com", "site": "Honeywell"}
+    # Forest River: ApplicantStack board gets a page scan
+    assert ats.match_ats("x", 'href="http://forestriverinc.applicantstack.com/x/openings"')["ats"] == "page"
+
+
+def test_detect_tries_www_when_bare_domain_fails():
+    class S(FakeSession):
+        def get(self, url, **kw):
+            if url.startswith("https://acme.com"):
+                raise ConnectionError("dns")
+            return super().get(url, **kw)
+    s = S([(r"www\.acme\.com/careers", 'href="https://acme.wd5.myworkdayjobs.com/Acme"'),
+           (r"www\.acme\.com", '<a href="/careers">Careers</a>')])
+    assert ats.detect(s, {"name": "Acme", "website": "acme.com"})["ats"] == "workday"
+
+
+def test_oracle_paging():
+    page = lambda url, d: {"items": [{"requisitionList": [{"Id": str(i), "Title": f"IT Intern {i}", "PrimaryLocation": "Fort Wayne, IN, United States"}
+                                                          for i in (range(100) if "offset=0" in url else range(100, 130))]}]}
+    s = FakeSession([(r"recruitingCEJobRequisitions", page)])
+    jobs = ats.fetch_oracle(s, "Parkview", {"host": "x.fa.oraclecloud.com", "site": "CX_1"})
+    assert len(jobs) == 130
 
 
 def test_jibe():
@@ -250,3 +293,34 @@ def test_sf_rmk_j2w_and_slug_location():
     html = '<a class="jobTitle-link" href="/job/Elkhart-IT-Intern-IN-46514/1150/">IT Intern</a>'
     jobs = ats.fetch_sf_rmk(FakeSession([(r"/search/", html)]), "Patrick", {"origin": "https://careers.patrickind.com"})
     assert FLT.apply(jobs[0]).region == "Northern Indiana"
+
+
+def test_polite_session_backs_off_on_429(monkeypatch):
+    import requests
+    from radar import http
+    calls = []
+
+    class R:
+        def __init__(self, code, ra=""):
+            self.status_code, self.headers = code, {"Retry-After": ra} if ra else {}
+
+    seq = [R(429, "1"), R(429), R(200)]
+    monkeypatch.setattr(requests.Session, "request", lambda self, m, u, *a, **k: (calls.append(u), seq.pop(0))[1])
+    monkeypatch.setattr(http.time, "sleep", lambda s: calls.append(("sleep", round(s))))
+    monkeypatch.setattr(http.random, "uniform", lambda a, b: 0)
+    r = http.make_session().get("https://acme.wd5.myworkdayjobs.com/wday/cxs/acme/x/jobs")
+    assert r.status_code == 200
+    sleeps = [c[1] for c in calls if isinstance(c, tuple) and c[1] >= 1]
+    assert sleeps[0] == 1 and 5 in sleeps  # honoured Retry-After, then default backoff
+
+
+def test_stale_cache_is_redetected(monkeypatch):
+    import datetime as dt
+    from radar import main
+    monkeypatch.setattr(main.ats, "detect", lambda s, c: {"ats": "greenhouse", "slug": "new"})
+    today = dt.date(2026, 11, 21)
+    old = {"Acme": {"ats": "icims", "host": "cookie-policy-scripts.icims.com", "detected": "2026-11-20"}}
+    b = main.board_for({"name": "Acme", "website": "acme.com"}, old, None, today, False)
+    assert b["slug"] == "new" and b["v"] == main.ats.DETECT_VERSION
+    fresh = {"Acme": {"ats": "lever", "slug": "x", "detected": "2026-11-20", "v": main.ats.DETECT_VERSION}}
+    assert main.board_for({"name": "Acme", "website": "acme.com"}, fresh, None, today, False)["ats"] == "lever"
