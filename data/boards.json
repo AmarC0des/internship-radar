@@ -4,23 +4,27 @@
   "careers_url": "https://3riversfcu.org/about/careers",
   "detected": "2026-11-21",
   "url": "https://3riversfcu.org/about/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "AM General": {
   "ats": "ukg",
   "board": "https://recruiting.ultipro.com/AMG1002AMGC/JobBoard/f40ecd9c-1926-422b-82bf-5d5df3c0ad54",
   "careers_url": "https://www.amgeneral.com/careers/find-jobs/",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "AbbVie": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.abbvie.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.abbvie.com/",
+  "v": 2
  },
  "Abbott": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Accenture": {
   "ats": "workday",
@@ -28,109 +32,127 @@
   "detected": "2000-01-01",
   "host": "accenture.wd103.myworkdayjobs.com",
   "site": "AccentureCareers",
-  "tenant": "accenture"
+  "tenant": "accenture",
+  "v": 2
  },
  "Acrisure": {
   "ats": "phenom",
   "base": "https://careers.acrisure.com/us/en",
   "careers_url": "https://careers.acrisure.com/us/en",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Advia Credit Union": {
   "ats": "page",
   "careers_url": "https://www.adviacu.org/about/company-profile/careers",
   "detected": "2026-11-21",
   "url": "https://www.adviacu.org/about/company-profile/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Allstate": {
   "ats": "workday",
   "careers_url": "https://www.allstatecorporation.com/careers.aspx",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "allstate.wd5.myworkdayjobs.com",
   "site": "allstate_careers",
-  "tenant": "allstate"
+  "tenant": "allstate",
+  "v": 2
  },
  "Amway": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.amway.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.amway.com/",
+  "v": 2
  },
  "Andrews University": {
   "ats": "page",
   "careers_url": "https://www.andrews.edu/services/hr/job_seekers/",
   "detected": "2026-11-21",
   "url": "https://www.andrews.edu/services/hr/job_seekers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Aon": {
-  "ats": "icims",
+  "ats": "page",
   "careers_url": "https://jobs.aon.com/",
-  "detected": "2000-01-01",
-  "host": "cookie-policy-scripts.icims.com"
+  "detected": "2026-11-21",
+  "url": "https://jobs.aon.com/",
+  "v": 2,
+  "vendor": "own-site"
  },
  "Armstrong International": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://armstronginternational.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.armstronginternational.com/",
+  "v": 2
  },
  "Arthur J. Gallagher": {
   "ats": "page",
   "careers_url": "https://jobs.ajg.com/ajg-home",
   "detected": "2026-11-21",
   "url": "https://jobs.ajg.com/ajg-home",
+  "v": 2,
   "vendor": "own-site"
  },
  "Ash Brokerage": {
   "ats": "workday",
   "careers_url": "https://www.ashbrokerage.com/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "integritymarketing.wd1.myworkdayjobs.com",
   "site": "ashbrokerage",
-  "tenant": "integritymarketing"
+  "tenant": "integritymarketing",
+  "v": 2
  },
  "Atomic Object": {
   "ats": "greenhouse",
   "careers_url": "https://atomicobject.com/careers",
   "detected": "2026-11-21",
-  "slug": "atomicobject"
+  "slug": "atomicobject",
+  "v": 2
  },
  "BAE Systems Fort Wayne": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "BMO": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='www.bmo.com', port=443): Max retries exceeded with url: /en-us/main/personal/ (Caused by ReadT"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.bmo.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSCo",
+  "v": 2
  },
  "BP Whiting": {
   "ats": "workday",
   "careers_url": "https://careers.bp.com/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "bpinternational.wd3.myworkdayjobs.com",
   "site": "bpCareers",
-  "tenant": "bpinternational"
+  "tenant": "bpinternational",
+  "v": 2
  },
  "Baker Tilly": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.bakertilly.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.bakertilly.com/",
+  "v": 2
  },
  "Baxter": {
   "ats": "workday",
   "careers_url": "https://jobs.baxter.com/en",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "baxter.wd1.myworkdayjobs.com",
   "site": "baxter",
-  "tenant": "baxter"
+  "tenant": "baxter",
+  "v": 2
  },
  "Beacon Health System": {
   "ats": "page",
   "careers_url": "https://careers.beaconhealthsystem.org/",
   "detected": "2026-11-21",
   "url": "https://careers.beaconhealthsystem.org/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Bethel University": {
@@ -138,6 +160,7 @@
   "careers_url": "https://betheluniversity.edu/academics/career-development/",
   "detected": "2026-11-21",
   "url": "https://betheluniversity.edu/academics/career-development/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Bronson Healthcare": {
@@ -149,23 +172,27 @@
   "ats": "ukg",
   "board": "https://recruiting.ultipro.com/BRO1008BMIC/JobBoard/67f5ad86-545d-42ef-bb07-cb84ada298ea",
   "careers_url": "https://www.brotherhoodmutual.com/careers",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "CDW": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.cdw.com/content/cdw/en/articles/ai/ai-retail-impact-opportunity"
+  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.cdw.com/content/cdw/en/articles/ai/ai-retail-impact-opportunity",
+  "v": 2
  },
  "CME Group": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://cmegroup.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.cmegroup.com/",
+  "v": 2
  },
  "Cboe": {
   "ats": "phenom",
   "base": "https://careers.cboe.com/us/en",
   "careers_url": "https://careers.cboe.com/us/en",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Centier Bank": {
   "ats": "workday",
@@ -173,13 +200,15 @@
   "detected": "2026-11-21",
   "host": "centier.wd501.myworkdayjobs.com",
   "site": "centierbankcareers",
-  "tenant": "centier"
+  "tenant": "centier",
+  "v": 2
  },
  "City of South Bend": {
   "ats": "page",
   "careers_url": "https://southbendin.gov/employment/",
   "detected": "2026-11-21",
   "url": "https://southbendin.gov/employment/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Cleveland-Cliffs": {
@@ -187,6 +216,7 @@
   "careers_url": "https://careers.clevelandcliffs.com/",
   "detected": "2026-11-21",
   "url": "https://careers.clevelandcliffs.com/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Community Healthcare System": {
@@ -194,44 +224,52 @@
   "careers_url": "https://www.powershealth.org/about-us/careers",
   "detected": "2026-11-21",
   "url": "https://www.powershealth.org/about-us/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Consumers Energy": {
   "ats": "sf_rmk",
   "careers_url": "https://careers.consumersenergy.com/search/?q=&locationsearch=&utm_source=careersite&utm_campaign=applynowbutton",
   "detected": "2026-11-21",
-  "origin": "https://careers.consumersenergy.com"
+  "origin": "https://careers.consumersenergy.com",
+  "v": 2
  },
  "Corewell Health": {
   "ats": "phenom",
   "base": "https://careers.corewellhealth.org/us/en",
   "careers_url": "https://careers.corewellhealth.org/us/en",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Coyote Logistics": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 404 Client Error: Unknown site for url: https://coyote.com/"
+  "error": "HTTPError: 404 Client Error: Unknown site for url: https://coyote.com/",
+  "v": 2
  },
  "Crane Composites": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://cranecomposites.com/"
+  "error": "HTTPError: 404 Client Error: Not Found for url: https://www.cranecomposites.com/",
+  "v": 2
  },
  "Crate & Barrel": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.crateandbarrel.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.crateandbarrel.com/",
+  "v": 2
  },
  "Cressy & Everett": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: FORBIDDEN for url: https://www.cressyeverett.com/shared/human/pow.php?return=https%3A%2F%2Fwww.cressye"
+  "error": "HTTPError: 403 Client Error: FORBIDDEN for url: https://www.cressyeverett.com/shared/human/pow.php?return=https%3A%2F%2Fwww.cressye",
+  "v": 2
  },
  "Crossroads Bank": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://crossroadsbank.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.crossroadsbank.com/",
+  "v": 2
  },
  "Crowe LLP": {
   "ats": "none",
@@ -251,7 +289,8 @@
   "careers_url": "https://jobs.dana.com/",
   "company_id": "DanaLimitedP",
   "detected": "2026-11-21",
-  "host": "career4.successfactors.com"
+  "host": "career4.successfactors.com",
+  "v": 2
  },
  "DePuy Synthes (J&J)": {
   "ats": "workday",
@@ -259,24 +298,30 @@
   "detected": "2026-11-21",
   "host": "jj.wd5.myworkdayjobs.com",
   "site": "JJ",
-  "tenant": "jj"
+  "tenant": "jj",
+  "v": 2
  },
  "Deloitte": {
   "ats": "page",
   "careers_url": "https://www.deloitte.com/us/en/careers/student-careers.html?icid=top_student-careers",
   "detected": "2026-11-21",
   "url": "https://www.deloitte.com/us/en/careers/student-careers.html?icid=top_student-careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Denso Battle Creek": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.denso.com/us-ca/en/careers/locations/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.denso.com/us-ca/en/careers/locations/",
+  "v": 2
  },
  "Dexter Group": {
-  "ats": "none",
+  "ats": "page",
+  "careers_url": "https://www.dextergroup.com/careers/?category=&positionType=&location=&zipcode=&radius=20&keyword=cdl",
   "detected": "2026-11-21",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://www.dextergroup.com/careers"
+  "url": "https://www.dextergroup.com/careers/?category=&positionType=&location=&zipcode=&radius=20&keyword=cdl",
+  "v": 2,
+  "vendor": "own-site"
  },
  "Discover Financial": {
   "ats": "workday",
@@ -284,61 +329,73 @@
   "detected": "2026-11-21",
   "host": "capitalone.wd12.myworkdayjobs.com",
   "site": "Capital_One",
-  "tenant": "capitalone"
+  "tenant": "capitalone",
+  "v": 2
  },
  "Do it Best": {
   "ats": "page",
   "careers_url": "https://www.doitbestcareers.com/",
   "detected": "2026-11-21",
   "url": "https://www.doitbestcareers.com/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Domino's (Ann Arbor)": {
-  "ats": "none",
+  "ats": "page",
+  "careers_url": "https://jobs.dominos.com/us/",
   "detected": "2026-11-21",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://jobs.dominos.com/us/en"
+  "url": "https://jobs.dominos.com/us/",
+  "v": 2,
+  "vendor": "own-site"
  },
  "Duncan Aviation": {
   "ats": "page",
   "careers_url": "https://duncanaviation.aero/Careers/students-internships",
   "detected": "2026-11-21",
   "url": "https://duncanaviation.aero/Careers/students-internships",
+  "v": 2,
   "vendor": "own-site"
  },
  "EY": {
   "ats": "sf_rmk",
   "careers_url": "https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch&local=en_US",
   "detected": "2026-11-21",
-  "origin": "https://careers.ey.com"
+  "origin": "https://careers.ey.com",
+  "v": 2
  },
  "Eaton Galesburg": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='www.eaton.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPS"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.eaton.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPS",
+  "v": 2
  },
  "Echo Global Logistics": {
   "ats": "workday",
   "careers_url": "https://www.echo.com/careers/campus-recruiter/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "echo.wd1.myworkdayjobs.com",
   "site": "Echo_Logistics",
-  "tenant": "echo"
+  "tenant": "echo",
+  "v": 2
  },
  "Elkhart Brass": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 520 Server Error: <none> for url: https://elkhartbrass.com/"
+  "error": "HTTPError: 520 Server Error: <none> for url: https://www.elkhartbrass.com/",
+  "v": 2
  },
  "Elkhart County Government": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://elkhartcountyindiana.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.elkhartcountyindiana.com/",
+  "v": 2
  },
  "Everence Financial": {
   "ats": "page",
   "careers_url": "https://www.everence.com/about/careers/internships",
   "detected": "2026-11-21",
   "url": "https://www.everence.com/about/careers/internships",
+  "v": 2,
   "vendor": "own-site"
  },
  "Everwise Credit Union": {
@@ -347,14 +404,17 @@
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://everwisecu.com/"
  },
  "Exelon / ComEd": {
-  "ats": "none",
+  "ats": "jibe",
+  "careers_url": "https://jobs.exeloncorp.com/careers-home/",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='exeloncorp.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HT"
+  "origin": "https://jobs.exeloncorp.com",
+  "v": 2
  },
  "Family Express": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Federal Reserve Bank of Chicago": {
   "ats": "workday",
@@ -362,12 +422,14 @@
   "detected": "2026-11-21",
   "host": "rb.wd5.myworkdayjobs.com",
   "site": "FRS",
-  "tenant": "rb"
+  "tenant": "rb",
+  "v": 2
  },
  "First Federal Savings Bank (Huntington)": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='firstfedhuntington.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.firstfedhuntington.com', port=443): Max retries exceeded with url: / (Caused by ConnectTim",
+  "v": 2
  },
  "Forest River": {
   "ats": "none",
@@ -379,6 +441,7 @@
   "careers_url": "https://fwmetals.com/who-we-are/careers",
   "detected": "2026-11-21",
   "url": "https://fwmetals.com/who-we-are/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Forvis Mazars": {
@@ -386,32 +449,37 @@
   "careers_url": "https://www.forvismazars.us/careers",
   "detected": "2026-11-21",
   "url": "https://www.forvismazars.us/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Franciscan Health": {
   "ats": "phenom",
   "base": "https://jobs.franciscanhealth.org/us/en",
   "careers_url": "https://jobs.franciscanhealth.org/us/en",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Gentex": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Gordon Food Service": {
   "ats": "workday",
   "careers_url": "https://gfs.com/en-us/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "gfs.wd5.myworkdayjobs.com",
   "site": "usjobs-gen-gfs",
-  "tenant": "gfs"
+  "tenant": "gfs",
+  "v": 2
  },
  "Goshen College": {
   "ats": "page",
   "careers_url": "https://www.goshen.edu/undergraduate-programs/global-education/",
   "detected": "2026-11-21",
   "url": "https://www.goshen.edu/undergraduate-programs/global-education/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Goshen Health": {
@@ -419,6 +487,7 @@
   "careers_url": "https://goshenhealth.com/about/careers/provider-opportunities",
   "detected": "2026-11-21",
   "url": "https://goshenhealth.com/about/careers/provider-opportunities",
+  "v": 2,
   "vendor": "own-site"
  },
  "Grace College": {
@@ -426,18 +495,21 @@
   "careers_url": "https://www.grace.edu/academics/center-for-career-connections/",
   "detected": "2026-11-21",
   "url": "https://www.grace.edu/academics/center-for-career-connections/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Grainger": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Grand Design RV": {
   "ats": "page",
   "careers_url": "https://www.granddesignrv.com/company/careers",
   "detected": "2026-11-21",
   "url": "https://www.granddesignrv.com/company/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Grant Thornton": {
@@ -445,28 +517,35 @@
   "careers_url": "https://grantthornton.com/",
   "detected": "2026-11-21",
   "host": "ehzq.fa.us2.oraclecloud.com",
-  "site": "CX_1"
+  "site": "CX_1",
+  "v": 2
  },
  "Graphic Packaging": {
-  "ats": "none",
+  "ats": "page",
+  "careers_url": "https://www.graphicpkg.com/careers/",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='graphicpkg.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"H"
+  "url": "https://www.graphicpkg.com/careers/",
+  "v": 2,
+  "vendor": "own-site"
  },
  "Greenleaf Trust": {
   "ats": "adp",
   "careers_url": "https://greenleaftrust.com/home/careers/",
   "cid": "454c7d2d-b7a3-4771-8631-c441b6d82034",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Groupon": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.groupon.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.groupon.com/",
+  "v": 2
  },
  "Grubhub": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Guaranteed Rate (Rate)": {
   "ats": "workday",
@@ -474,20 +553,23 @@
   "detected": "2026-11-21",
   "host": "rate.wd108.myworkdayjobs.com",
   "site": "Guaranteed_Rate_Inc_External",
-  "tenant": "rate"
+  "tenant": "rate",
+  "v": 2
  },
  "Heart City Health": {
   "ats": "page",
   "careers_url": "https://healthlincchc.org/join-the-team/employment/",
   "detected": "2026-11-21",
   "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=6C1073B85A68AEDF43A712AFD9C64019&fromClientSide=true",
+  "v": 2,
   "vendor": "paycom"
  },
  "Holladay Properties": {
   "ats": "paylocity",
   "careers_url": "https://www.holladayproperties.com/about-us/careers/",
   "detected": "2026-11-21",
-  "guid": "1e76cd67-22c4-4bae-8dd8-c0ab52c51098"
+  "guid": "1e76cd67-22c4-4bae-8dd8-c0ab52c51098",
+  "v": 2
  },
  "Honeywell Aerospace": {
   "ats": "page",
@@ -501,6 +583,7 @@
   "careers_url": "https://www.honorcu.com/career-opportunities/",
   "detected": "2026-11-21",
   "url": "https://www.honorcu.com/career-opportunities/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Hoosier Tire": {
@@ -508,6 +591,7 @@
   "careers_url": "https://www.hoosiertire.com/careers",
   "detected": "2026-11-21",
   "url": "https://www.hoosiertire.com/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Horizon Bank": {
@@ -515,23 +599,27 @@
   "careers_url": "https://www.horizonbank.com/about/careers",
   "detected": "2026-11-21",
   "url": "https://www.horizonbank.com/about/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Howmet Aerospace LaPorte": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Hub International": {
   "ats": "phenom",
   "base": "https://careers.hubinternational.com/us/en",
   "careers_url": "https://careers.hubinternational.com/us/en",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Hyatt": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.hyatt.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.hyatt.com/",
+  "v": 2
  },
  "Indiana Michigan Power (AEP)": {
   "ats": "workday",
@@ -539,61 +627,71 @@
   "detected": "2026-11-21",
   "host": "aep.wd1.myworkdayjobs.com",
   "site": "AEPCareerSite",
-  "tenant": "aep"
+  "tenant": "aep",
+  "v": 2
  },
  "Indiana Tech": {
   "ats": "page",
   "careers_url": "https://www.indianatech.edu/",
   "detected": "2026-11-21",
   "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=9B7DD7DDF4B46DE388E0D590C86BBE1D",
+  "v": 2,
   "vendor": "paycom"
  },
  "Inovateus Solar": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Interra Credit Union": {
   "ats": "ukg",
   "board": "https://recruiting2.ultipro.com/INT1063INTCU/JobBoard/5786d0b7-c595-469a-b8c2-56d92566cc7b",
   "careers_url": "https://www.interracu.com/careers",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Ivy Tech Community College": {
   "ats": "page",
   "careers_url": "https://www.ivytech.edu/programs/signature-opportunities-for-students/",
   "detected": "2026-11-21",
   "url": "https://www.ivytech.edu/programs/signature-opportunities-for-students/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Jayco": {
   "ats": "adp",
   "careers_url": "https://www.jaycofamily.com/careers/",
   "cid": "c450ad95-dd65-44d1-b1b8-6feea9ef57a5",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "KPMG": {
   "ats": "page",
   "careers_url": "https://kpmg.com/xx/en/careers/job-search.html",
   "detected": "2026-11-21",
   "url": "https://kpmg.com/xx/en/careers/job-search.html",
+  "v": 2,
   "vendor": "own-site"
  },
  "Kalsec": {
   "ats": "ukg",
   "board": "https://recruiting2.ultipro.com/KAL1000KALSE/JobBoard/c29db148-d291-4711-9c3b-349c1f8e40fc",
   "careers_url": "https://www.kalsec.com/about-kalsec/careers",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Kellanova": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://kellanova.com/"
+  "error": "HTTPError: 405 Client Error: Method Not Allowed for url: https://www.kellanovacareers.com/",
+  "v": 2
  },
  "Kem Krest": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Kemper": {
   "ats": "workday",
@@ -601,59 +699,69 @@
   "detected": "2026-11-21",
   "host": "kemper.wd5.myworkdayjobs.com",
   "site": "Kemper_Careers",
-  "tenant": "kemper"
+  "tenant": "kemper",
+  "v": 2
  },
  "Keystone RV": {
   "ats": "page",
-  "careers_url": "https://www.keystonerv.com/pickme",
+  "careers_url": "https://www.keystonerv.com/careers",
   "detected": "2026-11-21",
-  "url": "https://www.keystonerv.com/pickme",
-  "vendor": "own-site"
+  "url": "https://keystonerv.applicantstack.com/x/openings",
+  "v": 2,
+  "vendor": "applicantstack"
  },
  "Kosciusko Community Hospital (Lutheran)": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='kch.com', port=443): Max retries exceeded with url: / (Caused by ProtocolError('Connection abo"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.kch.com', port=443): Max retries exceeded with url: / (Caused by ProtocolError('Connection",
+  "v": 2
  },
  "Kraft Heinz": {
   "ats": "page",
   "careers_url": "https://careers.kraftheinzcompany.com",
   "detected": "2026-11-21",
   "url": "https://careers.kraftheinzcompany.com",
+  "v": 2,
   "vendor": "own-site"
  },
  "Kruggel Lawton CPAs": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='kruggellawton.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError"
+  "error": "SSLError: HTTPSConnectionPool(host='www.kruggellawton.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCer",
+  "v": 2
  },
  "L3Harris Fort Wayne": {
   "ats": "page",
   "careers_url": "https://careers.l3harris.com/en",
   "detected": "2026-11-21",
   "url": "https://careers.l3harris.com/en",
+  "v": 2,
   "vendor": "own-site"
  },
  "LECO Corporation": {
   "ats": "adp",
   "careers_url": "https://www.leco.com/careers/",
   "cid": "263cbf9c-eec3-4f43-a005-51e8815d8a23",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "LEER Group": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://www.leer.com"
+  "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://www.leer.com/",
+  "v": 2
  },
  "LaSalle Bristol": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='lasallebristol.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionErro"
+  "error": "ConnectionError: HTTPSConnectionPool(host='lasallebristol.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionErro",
+  "v": 2
  },
  "Lake Michigan Credit Union": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.lmcu.org/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.lmcu.org/",
+  "v": 2
  },
  "Lincoln Financial": {
   "ats": "none",
@@ -665,70 +773,79 @@
   "careers_url": "https://jobs.chs.net/hospitals/bluffton-regional-medical-center",
   "detected": "2026-11-21",
   "host": "fa-evxo-saasfaprod1.fa.ocs.oraclecloud.com",
-  "site": "CX_1"
+  "site": "CX_1",
+  "v": 2
  },
  "MIE (Medical Informatics Engineering)": {
   "ats": "greenhouse",
   "careers_url": "https://mieweb.org/",
   "detected": "2026-11-21",
-  "slug": "medicalinformaticsengineering"
+  "slug": "medicalinformaticsengineering",
+  "v": 2
  },
  "Maple Leaf Farms": {
   "ats": "ukg",
   "board": "https://recruiting.ultipro.com/MAP1005MALE/JobBoard/b075ab68-3cc0-4535-b8e3-3eee02871e27",
   "careers_url": "https://www.mapleleaffarms.com/pages/careers",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Martin's Super Markets": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='martinsupermarkets.com', port=443): Max retries exceeded with url: / (Caused by NameResolution"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.martinsupermarkets.com', port=443): Max retries exceeded with url: / (Caused by NameResolu",
+  "v": 2
  },
  "Matrix Integration": {
   "ats": "page",
   "careers_url": "https://www.matrixintegration.com/careers/",
   "detected": "2026-11-21",
   "url": "https://www.matrixintegration.com/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "McDonald's": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.mcdonalds.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.mcdonalds.com/",
+  "v": 2
  },
  "Medline": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.medline.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.medline.com/",
+  "v": 2
  },
  "Meijer": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.meijer.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.meijer.com/",
+  "v": 2
  },
  "Methodist Hospitals": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://methodisthospitals.org/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.methodisthospitals.org/",
+  "v": 2
  },
  "Michigan Medicine (Ann Arbor)": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://uofmhealth.org/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.uofmhealth.org/",
+  "v": 2
  },
  "MillerKnoll": {
-  "ats": "workday",
-  "careers_url": "https://www.millerknoll.com/about/careers",
-  "detected": "2000-01-01",
-  "host": "millerknoll.wd1.myworkdayjobs.com",
-  "site": "MillerKnoll",
-  "tenant": "millerknoll"
+  "ats": "none",
+  "detected": "2026-11-21",
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.millerknoll.com/",
+  "v": 2
  },
  "Morningstar": {
   "ats": "page",
   "careers_url": "https://www.morningstar.com/company/media-kit",
   "detected": "2026-11-21",
   "url": "https://www.morningstar.com/company/media-kit",
+  "v": 2,
   "vendor": "own-site"
  },
  "Mutually Human": {
@@ -736,6 +853,7 @@
   "careers_url": "https://www.mutuallyhuman.com/humans/careers/",
   "detected": "2026-11-21",
   "url": "https://www.mutuallyhuman.com/humans/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "NIBCO": {
@@ -743,20 +861,23 @@
   "careers_url": "https://www.nibco.com/careers/",
   "detected": "2026-11-21",
   "url": "https://www.nibco.com/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "NiSource (NIPSCO)": {
   "ats": "workday",
   "careers_url": "https://www.nisource.com/careers",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "nisource.wd1.myworkdayjobs.com",
   "site": "NiSource",
-  "tenant": "nisource"
+  "tenant": "nisource",
+  "v": 2
  },
  "Northern Indiana Commuter Transportation District": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='nictd.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSC"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.nictd.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HT",
+  "v": 2
  },
  "Northern Trust": {
   "ats": "workday",
@@ -764,23 +885,27 @@
   "detected": "2026-11-21",
   "host": "ntrs.wd1.myworkdayjobs.com",
   "site": "northerntrust",
-  "tenant": "ntrs"
+  "tenant": "ntrs",
+  "v": 2
  },
  "Notre Dame FCU": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='ndfcu.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSC"
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.ndfcu.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HT",
+  "v": 2
  },
  "OST (Open Systems Technologies)": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "SSLError: HTTPSConnectionPool(host='ostusa.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificati"
+  "error": "SSLError: HTTPSConnectionPool(host='www.ostusa.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerifi",
+  "v": 2
  },
  "Old Republic": {
   "ats": "page",
   "careers_url": "https://oldrepublic.com/about/careers",
   "detected": "2026-11-21",
   "url": "https://oldrepublic.com/about/careers",
+  "v": 2,
   "vendor": "own-site"
  },
  "Orchid Orthopedic Solutions": {
@@ -789,30 +914,35 @@
   "detected": "2026-11-21",
   "host": "orchidortho.wd5.myworkdayjobs.com",
   "site": "Careers",
-  "tenant": "orchidortho"
+  "tenant": "orchidortho",
+  "v": 2
  },
  "OrthoPediatrics": {
   "ats": "adp",
   "careers_url": "https://www.orthopediatrics.com/about-us/careers/?lang=de",
   "cid": "8b3c8143-b9d5-4e17-be61-5b7028a52841",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Paragon Medical": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://paragonmedical.com/"
+  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.paragonmedical.com/",
+  "v": 2
  },
  "Parker Hannifin Kalamazoo": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.parker.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.parker.com/",
+  "v": 2
  },
  "Parkview Health": {
   "ats": "oracle",
   "careers_url": "https://www.parkview.com/",
   "detected": "2026-11-21",
   "host": "parkview-ibyyjb.fa.ocs.oraclecloud.com",
-  "site": "CX_1"
+  "site": "CX_1",
+  "v": 2
  },
  "Patrick Industries": {
   "ats": "none",
@@ -820,15 +950,19 @@
   "error": "HTTPError: 520 Server Error: <none> for url: https://patrickind.com/"
  },
  "Paylocity": {
-  "ats": "none",
+  "ats": "page",
+  "careers_url": "https://www.paylocity.com/company/careers/",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "url": "https://www.paylocity.com/company/careers/",
+  "v": 2,
+  "vendor": "own-site"
  },
  "Peoples Bank (Munster)": {
   "ats": "page",
   "careers_url": "https://www.ibankpeoples.com/early-career",
   "detected": "2026-11-21",
   "url": "https://www.ibankpeoples.com/early-career",
+  "v": 2,
   "vendor": "own-site"
  },
  "Perrigo": {
@@ -836,80 +970,93 @@
   "careers_url": "https://careers.perrigo.com/",
   "company_id": "Perrigo",
   "detected": "2026-11-21",
-  "host": "career4.successfactors.com"
+  "host": "career4.successfactors.com",
+  "v": 2
  },
  "Petroleum Traders": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='petroleumtraders.com', port=443): Max retries exceeded with url: / (Caused by ProtocolError('C"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.petroleumtraders.com', port=443): Max retries exceeded with url: / (Caused by ProtocolErro",
+  "v": 2
  },
  "Pilgrim's Pride Plymouth": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://jobs.pilgrims.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://jobs.pilgrims.com/",
+  "v": 2
  },
  "Plante Moran": {
   "ats": "workday",
   "careers_url": "https://careers.plantemoran.com/jobs?keyword=intern",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "plantemoran.wd1.myworkdayjobs.com",
   "site": "pmexternalcareers",
-  "tenant": "plantemoran"
+  "tenant": "plantemoran",
+  "v": 2
  },
  "Polywood": {
   "ats": "paylocity",
   "careers_url": "https://www.polywood.com/pages/production-opportunities",
   "detected": "2026-11-21",
-  "guid": "b193b7fc-f4f7-424e-ae62-b102b04750da"
+  "guid": "b193b7fc-f4f7-424e-ae62-b102b04750da",
+  "v": 2
  },
  "Post Consumer Brands": {
   "ats": "icims",
   "careers_url": "https://jobs.postholdings.com/postconsumerbrands-home",
   "detected": "2026-11-21",
-  "host": "postconsumerbrandscasljobs-postholdings.icims.com"
+  "host": "postconsumerbrandscasljobs-postholdings.icims.com",
+  "v": 2
  },
  "Press Ganey": {
   "ats": "phenom",
-  "base": "https://www.qualtrics.com",
+  "base": "https://www.qualtrics.com/careers/us/en",
   "careers_url": "https://www.qualtrics.com/careers/us/en?utm_source=PGF&utm_medium=website&utm_content=pressganey_careers",
-  "detected": "2000-01-01"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Protiviti": {
   "ats": "workday",
   "careers_url": "https://www.protiviti.com/us-en",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "roberthalf.wd1.myworkdayjobs.com",
   "site": "ProtivitiNA",
-  "tenant": "roberthalf"
+  "tenant": "roberthalf",
+  "v": 2
  },
  "Purdue Fort Wayne": {
   "ats": "sf_rmk",
   "careers_url": "https://careers.purdue.edu/FW",
   "detected": "2026-11-21",
-  "origin": "https://careers.purdue.edu"
+  "origin": "https://careers.purdue.edu",
+  "v": 2
  },
  "PwC": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.pwc.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.pwc.com/",
+  "v": 2
  },
  "Pyromation": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://pyromation.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.pyromation.com/",
+  "v": 2
  },
  "RSM US": {
   "ats": "workday",
   "careers_url": "https://jobs.rsmus.com/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "rsm.wd1.myworkdayjobs.com",
   "site": "RSMCareers",
-  "tenant": "rsm"
+  "tenant": "rsm",
+  "v": 2
  },
  "RTX Raytheon Fort Wayne": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://rtx.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.rtx.com/",
+  "v": 2
  },
  "Rehmann": {
   "ats": "workday",
@@ -917,34 +1064,39 @@
   "detected": "2026-11-21",
   "host": "rehmann.wd108.myworkdayjobs.com",
   "site": "Rehmann_External_Career_Site",
-  "tenant": "rehmann"
+  "tenant": "rehmann",
+  "v": 2
  },
  "Relativity": {
   "ats": "workday",
   "careers_url": "https://www.relativity.com/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "kcura.wd1.myworkdayjobs.com",
   "site": "External_Career_Site",
-  "tenant": "kcura"
+  "tenant": "kcura",
+  "v": 2
  },
  "Rieth-Riley Construction": {
   "ats": "page",
   "careers_url": "https://www.rieth-riley.com/careers/",
   "detected": "2026-11-21",
   "url": "https://www.rieth-riley.com/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Ruoff Mortgage": {
   "ats": "paylocity",
   "careers_url": "https://ruoff.com/careers",
   "detected": "2026-11-21",
-  "guid": "ba8ceb90-569a-4b7e-a242-7bda28b420ea"
+  "guid": "ba8ceb90-569a-4b7e-a242-7bda28b420ea",
+  "v": 2
  },
  "STAR Financial Bank": {
   "ats": "ukg",
   "board": "https://recruiting.ultipro.com/STA1021/JobBoard/845b0d6e-7758-f565-5bd8-1a8520274a43",
   "careers_url": "https://www.starfinancial.com/careers",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Saint Joseph Health System": {
   "ats": "workday",
@@ -952,13 +1104,15 @@
   "detected": "2026-11-21",
   "host": "trinityhealth.wd1.myworkdayjobs.com",
   "site": "Jobs",
-  "tenant": "trinityhealth"
+  "tenant": "trinityhealth",
+  "v": 2
  },
  "Shyft Group": {
   "ats": "page",
   "careers_url": "https://theshyftgroup.com/careers/",
   "detected": "2026-11-21",
   "url": "https://theshyftgroup.com/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Sinclair Broadcast (WSBT)": {
@@ -966,18 +1120,21 @@
   "careers_url": "https://wsbt.com/",
   "detected": "2026-11-21",
   "host": "edyy.fa.us2.oraclecloud.com",
-  "site": "CX_2002"
+  "site": "CX_2002",
+  "v": 2
  },
  "South Bend Community School Corp": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='sbcsc.k12.in.us', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.sbcsc.k12.in.us', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr",
+  "v": 2
  },
  "Southwestern Michigan College": {
   "ats": "page",
   "careers_url": "https://swmich.edu/academics/university-partnerships-and-transfer-opportunities/",
   "detected": "2026-11-21",
   "url": "https://swmich.edu/academics/university-partnerships-and-transfer-opportunities/",
+  "v": 2,
   "vendor": "own-site"
  },
  "SpartanNash": {
@@ -985,6 +1142,7 @@
   "careers_url": "https://careers.cswg.com/",
   "detected": "2026-11-21",
   "url": "https://careers.cswg.com/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Sprout Social": {
@@ -992,82 +1150,96 @@
   "careers_url": "https://sproutsocial.com/careers/",
   "detected": "2026-11-21",
   "url": "https://sproutsocial.com/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "St. Joseph County Government": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.sjcindiana.gov/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.sjcindiana.gov/",
+  "v": 2
  },
  "Steel Dynamics": {
   "ats": "icims",
   "careers_url": "https://www.steeldynamics.com/careersnew/",
   "detected": "2026-11-21",
-  "host": "careers-steeldynamics.icims.com"
+  "host": "careers-steeldynamics.icims.com",
+  "v": 2
  },
  "Steel Warehouse": {
   "ats": "paylocity",
   "careers_url": "https://www.steelwarehouse.com/about/careers/",
   "detected": "2026-11-21",
-  "guid": "a2748377-756e-45ce-91dd-df69cc645069"
+  "guid": "a2748377-756e-45ce-91dd-df69cc645069",
+  "v": 2
  },
  "Steelcase": {
   "ats": "smartrecruiters",
   "careers_url": "https://www.steelcase.com/about/steelcase/careers/",
   "detected": "2026-11-21",
-  "slug": "SteelcaseInc"
+  "slug": "SteelcaseInc",
+  "v": 2
  },
  "Supreme Corporation": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='supremecorp.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.supremecorp.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr",
+  "v": 2
  },
  "Task Force Tips": {
   "ats": "adp",
   "careers_url": "https://tft.com/company/careers/",
   "cid": "7339b347-63bb-4220-baf6-4c82e9c51d06",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Tecomet": {
   "ats": "page",
   "careers_url": "https://tecomet.com/careers/",
   "detected": "2026-11-21",
   "url": "https://tecomet.com/careers/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Tempus AI": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://tempus.com/"
+  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.tempus.com/",
+  "v": 2
  },
  "Thor Industries": {
   "ats": "adp",
   "careers_url": "https://www.thorindustries.com:443/careers",
   "cid": "a4c08bd3-eedf-419a-9fb6-5d2ac8a3bafa",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "TransUnion": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://transunion.com/"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.transunion.com/",
+  "v": 2
  },
  "U.S. Steel": {
   "ats": "page",
   "careers_url": "https://www.ussteel.com/early-career",
   "detected": "2026-11-21",
   "url": "https://www.ussteel.com/early-career",
+  "v": 2,
   "vendor": "own-site"
  },
  "Ulta Beauty": {
   "ats": "icims",
   "careers_url": "https://careers.ulta.com/careers/",
   "detected": "2026-11-21",
-  "host": "cdcmcareers-ulta.icims.com"
+  "host": "cdcmcareers-ulta.icims.com",
+  "v": 2
  },
  "United Airlines": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='www.united.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTP"
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.united.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTP",
+  "v": 2
  },
  "University of Notre Dame": {
   "ats": "smartrecruiters",
@@ -1078,21 +1250,24 @@
  "Urschel Laboratories": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "no careers page found"
+  "error": "no careers page found",
+  "v": 2
  },
  "Vail Rubber Works": {
   "ats": "page",
   "careers_url": "https://www.vailrubber.com/about-us/employment",
   "detected": "2026-11-21",
   "url": "https://www.vailrubber.com/about-us/employment",
+  "v": 2,
   "vendor": "own-site"
  },
  "Valparaiso University": {
   "ats": "page",
-  "careers_url": "https://jobs.silkroad.com/Valpo/Careers",
+  "careers_url": "https://www.valpo.edu/",
   "detected": "2026-11-21",
   "url": "https://jobs.silkroad.com/Valpo/Careers",
-  "vendor": "own-site"
+  "v": 2,
+  "vendor": "silkroad"
  },
  "Vera Bradley": {
   "ats": "workday",
@@ -1100,32 +1275,37 @@
   "detected": "2026-11-21",
   "host": "verabradley.wd5.myworkdayjobs.com",
   "site": "vbcareers",
-  "tenant": "verabradley"
+  "tenant": "verabradley",
+  "v": 2
  },
  "WK Kellogg Co": {
   "ats": "phenom",
   "base": "https://jobs.wkkellogg.com/us/en",
   "careers_url": "https://jobs.wkkellogg.com/us/en",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Walgreens": {
   "ats": "page",
   "careers_url": "https://jobs.walgreens.com/en",
   "detected": "2026-11-21",
   "url": "https://jobs.walgreens.com/en",
+  "v": 2,
   "vendor": "own-site"
  },
  "West Monroe": {
   "ats": "greenhouse",
   "careers_url": "https://www.westmonroe.com/careers/job-search",
   "detected": "2026-11-21",
-  "slug": "westmonroe4"
+  "slug": "westmonroe4",
+  "v": 2
  },
  "Western Michigan University": {
   "ats": "page",
   "careers_url": "https://wmich.edu/career",
   "detected": "2026-11-21",
   "url": "https://wmich.edu/career",
+  "v": 2,
   "vendor": "own-site"
  },
  "Whirlpool Corporation": {
@@ -1133,32 +1313,37 @@
   "careers_url": "https://www.whirlpoolcareers.com/",
   "detected": "2026-11-21",
   "url": "https://www.whirlpoolcareers.com/",
+  "v": 2,
   "vendor": "own-site"
  },
  "Winnebago Industries (Newmar)": {
   "ats": "adp",
   "careers_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=82c90207-af7d-495b-b437-aa9a4c72f4e8&ccId=19000101_000001&type=JS&lang=en_US&selectedMenuKey=CareerCenter",
   "cid": "82c90207-af7d-495b-b437-aa9a4c72f4e8",
-  "detected": "2026-11-21"
+  "detected": "2026-11-21",
+  "v": 2
  },
  "Wolverine Worldwide": {
   "ats": "workday",
   "careers_url": "https://careers.wolverineworldwide.com/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "wwwinc.wd1.myworkdayjobs.com",
   "site": "WWW",
-  "tenant": "wwwinc"
+  "tenant": "wwwinc",
+  "v": 2
  },
  "Zebra Technologies": {
   "ats": "none",
   "detected": "2026-11-21",
-  "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://www.zebra.com/us/en/about-zebra/careers.html"
+  "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://www.zebra.com/us/en/about-zebra/careers.html",
+  "v": 2
  },
  "enFocus": {
   "ats": "page",
   "careers_url": "https://www.en-focus.org/careers-form",
   "detected": "2026-11-21",
   "url": "https://www.en-focus.org/careers-form",
+  "v": 2,
   "vendor": "own-site"
  },
  "project44": {
@@ -1166,6 +1351,7 @@
   "careers_url": "https://www.project44.com/company/careers/",
   "detected": "2026-11-21",
   "url": "https://www.project44.com/company/careers/",
+  "v": 2,
   "vendor": "own-site"
  }
 }
