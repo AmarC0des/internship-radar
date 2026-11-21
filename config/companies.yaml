@@ -1,0 +1,233 @@
+# Companies checked directly every run.
+#
+# Minimum entry:   - {name: Acme Corp, website: acme.com}
+# The tool finds the careers page and job board on its own (cached in data/boards.json).
+# If it can't, add `careers:` with the job-board URL, or pin the board exactly:
+#   ats: workday     host: acme.wd5.myworkdayjobs.com  tenant: acme  site: AcmeCareers
+#   ats: greenhouse | lever | ashby | smartrecruiters | bamboohr | recruitee | breezy | workable   slug: <board slug>
+#   ats: ukg         board: https://recruiting.ultipro.com/<TENANT>/JobBoard/<guid>
+#   ats: paylocity   guid: <guid>          ats: adp   cid: <guid>
+#   ats: phenom      base: https://careers.acme.com/us/en
+#   ats: jibe        origin: https://careers.acme.com
+#   ats: icims       host: careers-acme.icims.com
+#   ats: page        url: <any careers page>   (generic scan for "intern" links/text)
+#
+# Groups: anything outside `chicago_and_national` is treated as a local employer
+# (a bare "Intern" posting or one with no location is still shown).
+
+northern_indiana:
+  # --- South Bend / Mishawaka / Granger -----------------------------------
+  - {name: 1st Source Bank, website: 1stsource.com, ats: ukg, board: "https://recruiting.ultipro.com/STS1000SCO/JobBoard/bdcbc22d-c568-4b9f-bc84-421f9522fd47"}
+  - {name: Aunalytics, website: aunalytics.com, ats: page, url: "https://recruit.hirebridge.com/v3/CareerCenter/v2/?cid=8312&bid=2"}
+  - {name: AM General, website: amgeneral.com, careers: "https://www.amgeneral.com/careers/"}
+  - {name: Beacon Health System, website: beaconhealthsystem.org}
+  - {name: Saint Joseph Health System, website: sjmed.com}
+  - {name: Crowe LLP, website: crowe.com}
+  - {name: Honeywell Aerospace, website: honeywell.com, careers: "https://careers.honeywell.com/us/en"}
+  - {name: Everwise Credit Union, website: everwisecu.com}
+  - {name: Notre Dame FCU, website: ndfcu.org}
+  - {name: University of Notre Dame, website: nd.edu, careers: "https://jobs.nd.edu"}
+  - {name: Press Ganey, website: pressganey.com}
+  - {name: Steel Warehouse, website: steelwarehouse.com}
+  - {name: Martin's Super Markets, website: martinsupermarkets.com}
+  - {name: Holladay Properties, website: holladayproperties.com}
+  - {name: Inovateus Solar, website: inovateus.com}
+  - {name: Kem Krest, website: kemkrest.com}
+  - {name: Kruggel Lawton CPAs, website: kruggellawton.com}
+  - {name: Indiana Michigan Power (AEP), website: aep.com, careers: "https://aep.com/careers"}
+  - {name: Ivy Tech Community College, website: ivytech.edu}
+  - {name: City of South Bend, website: southbendin.gov}
+  - {name: St. Joseph County Government, website: sjcindiana.gov}
+  - {name: enFocus, website: en-focus.org}
+  - {name: South Bend Community School Corp, website: sbcsc.k12.in.us}
+  - {name: Hoosier Tire, website: hoosiertire.com}
+  - {name: Sinclair Broadcast (WSBT), website: wsbt.com}
+  - {name: Matrix Integration, website: matrixintegration.com}
+  # --- Elkhart / Goshen / Middlebury / Nappanee ---------------------------
+  - {name: Lippert, website: lippert.com, ats: jibe, origin: "https://careers.lippert.com"}
+  - {name: MORryde, website: morryde.com, ats: paylocity, guid: a9f9a8d7-7178-4d80-9666-05cb559c5f6f}
+  - {name: Patrick Industries, website: patrickind.com}
+  - {name: Thor Industries, website: thorindustries.com}
+  - {name: Forest River, website: forestriverinc.com}
+  - {name: Jayco, website: jayco.com}
+  - {name: Keystone RV, website: keystonerv.com}
+  - {name: Grand Design RV, website: granddesignrv.com}
+  - {name: Winnebago Industries (Newmar), website: winnebagoind.com}
+  - {name: NIBCO, website: nibco.com, careers: "https://www.nibco.com/careers/"}
+  - {name: Elkhart Brass, website: elkhartbrass.com}
+  - {name: Dexter Group, website: dextergroup.com, careers: "https://dextergroup.com/careers"}
+  - {name: LaSalle Bristol, website: lasallebristol.com}
+  - {name: LEER Group, website: leer.com}
+  - {name: Crane Composites, website: cranecomposites.com}
+  - {name: Shyft Group, website: theshyftgroup.com}
+  - {name: Heart City Health, website: heartcityhealth.org}
+  - {name: Goshen Health, website: goshenhealth.com}
+  - {name: Everence Financial, website: everence.com}
+  - {name: Interra Credit Union, website: interracu.com}
+  - {name: Cressy & Everett, website: cressyeverett.com}
+  - {name: Elkhart County Government, website: elkhartcountyindiana.com}
+  - {name: Goshen College, website: goshen.edu}
+  - {name: Bethel University, website: betheluniversity.edu}
+  - {name: Crossroads Bank, website: crossroadsbank.com}
+  - {name: Supreme Corporation, website: supremecorp.com}
+  - {name: Rieth-Riley Construction, website: riethriley.com}
+  # --- Plymouth / Marshall / Starke ---------------------------------------
+  - {name: Pilgrim's Pride Plymouth, website: pilgrims.com}
+  - {name: Culver Academies, website: culver.org}
+  - {name: First Federal Savings Bank (Huntington), website: firstfedhuntington.com}
+  # --- Warsaw / Kosciusko -------------------------------------------------
+  - {name: Zimmer Biomet, website: zimmerbiomet.com, ats: phenom, base: "https://careers.zimmerbiomet.com/us/en"}
+  - {name: DePuy Synthes (J&J), website: jnj.com, careers: "https://www.careers.jnj.com/en/jobs/?search=intern&location=Warsaw"}
+  - {name: Medtronic Warsaw, website: medtronic.com, ats: workday, host: medtronic.wd1.myworkdayjobs.com, tenant: medtronic, site: MedtronicCareers}
+  - {name: Lake City Bank, website: lakecitybank.com, ats: adp, cid: 4c0f5e63-d8a0-4686-b48c-977660d2dabc}
+  - {name: OrthoPediatrics, website: orthopediatrics.com}
+  - {name: Paragon Medical, website: paragonmedical.com}
+  - {name: Tecomet, website: tecomet.com}
+  - {name: Orchid Orthopedic Solutions, website: orchid-ortho.com}
+  - {name: Polywood, website: polywood.com}
+  - {name: Maple Leaf Farms, website: mapleleaffarms.com}
+  - {name: Kosciusko Community Hospital (Lutheran), website: kch.com}
+  - {name: Grace College, website: grace.edu}
+  # --- Fort Wayne / Northeast ---------------------------------------------
+  - {name: Lincoln Financial, website: lincolnfinancial.com}
+  - {name: Sweetwater, website: sweetwater.com, ats: page, url: "https://www.sweetwater.com/careers/openings/technology"}
+  - {name: Parkview Health, website: parkview.com}
+  - {name: Lutheran Health Network, website: lutheranhealth.net}
+  - {name: Steel Dynamics, website: steeldynamics.com}
+  - {name: Franklin Electric, website: franklin-electric.com, ats: pinpoint, slug: franklin-electric}
+  - {name: BAE Systems Fort Wayne, website: baesystems.com}
+  - {name: L3Harris Fort Wayne, website: l3harris.com}
+  - {name: RTX Raytheon Fort Wayne, website: rtx.com}
+  - {name: Vera Bradley, website: verabradley.com}
+  - {name: Do it Best, website: doitbest.com}
+  - {name: Brotherhood Mutual, website: brotherhoodmutual.com}
+  - {name: Fort Wayne Metals, website: fwmetals.com}
+  - {name: Ruoff Mortgage, website: ruoff.com}
+  - {name: MIE (Medical Informatics Engineering), website: mieweb.com}
+  - {name: Ash Brokerage, website: ashbrokerage.com}
+  - {name: STAR Financial Bank, website: starfinancial.com}
+  - {name: 3Rivers Federal Credit Union, website: 3riversfcu.org}
+  - {name: Dana Incorporated, website: dana.com}
+  - {name: General Motors Fort Wayne Assembly, website: gm.com, ats: workday, host: generalmotors.wd5.myworkdayjobs.com, tenant: generalmotors, site: Careers_GM}
+  - {name: Forvis Mazars, website: forvismazars.us}
+  - {name: Indiana Tech, website: indianatech.edu}
+  - {name: Purdue Fort Wayne, website: pfw.edu}
+  - {name: Petroleum Traders, website: petroleumtraders.com}
+  - {name: Pyromation, website: pyromation.com}
+  - {name: Horizon Bank, website: horizonbank.com}
+  # --- Northwest Indiana / LaPorte ----------------------------------------
+  - {name: NiSource (NIPSCO), website: nisource.com}
+  - {name: Centier Bank, website: centier.com}
+  - {name: Peoples Bank (Munster), website: ibankpeoples.com}
+  - {name: Community Healthcare System, website: comhs.org}
+  - {name: Franciscan Health, website: franciscanhealth.org}
+  - {name: Methodist Hospitals, website: methodisthospitals.org}
+  - {name: Urschel Laboratories, website: urschel.com}
+  - {name: Task Force Tips, website: tft.com}
+  - {name: Family Express, website: familyexpress.net}
+  - {name: U.S. Steel, website: ussteel.com}
+  - {name: Cleveland-Cliffs, website: clevelandcliffs.com}
+  - {name: BP Whiting, website: bp.com}
+  - {name: Valparaiso University, website: valpo.edu}
+  - {name: Howmet Aerospace LaPorte, website: howmet.com}
+  - {name: Northern Indiana Commuter Transportation District, website: nictd.com}
+
+southwest_michigan:
+  - {name: Stryker, website: stryker.com, ats: workday, host: stryker.wd1.myworkdayjobs.com, tenant: stryker, site: StrykerCareers}
+  - {name: Pfizer Kalamazoo, website: pfizer.com, ats: workday, host: pfizer.wd1.myworkdayjobs.com, tenant: pfizer, site: PfizerCareers}
+  - {name: Zoetis, website: zoetis.com, ats: workday, host: zoetis.wd5.myworkdayjobs.com, tenant: zoetis, site: zoetis}
+  - {name: Whirlpool Corporation, website: whirlpoolcorp.com}
+  - {name: Kellanova, website: kellanova.com}
+  - {name: WK Kellogg Co, website: wkkellogg.com}
+  - {name: Post Consumer Brands, website: postconsumerbrands.com}
+  - {name: Bronson Healthcare, website: bronsonhealth.com}
+  - {name: Corewell Health, website: corewellhealth.org}
+  - {name: Graphic Packaging, website: graphicpkg.com}
+  - {name: Kalsec, website: kalsec.com}
+  - {name: Greenleaf Trust, website: greenleaftrust.com}
+  - {name: Advia Credit Union, website: adviacu.org}
+  - {name: Honor Credit Union, website: honorcu.com}
+  - {name: Lake Michigan Credit Union, website: lmcu.org}
+  - {name: LECO Corporation, website: leco.com}
+  - {name: Armstrong International, website: armstronginternational.com}
+  - {name: Denso Battle Creek, website: densocareers.com}
+  - {name: Duncan Aviation, website: duncanaviation.aero}
+  - {name: Parker Hannifin Kalamazoo, website: parker.com}
+  - {name: Eaton Galesburg, website: eaton.com}
+  - {name: Perrigo, website: perrigo.com}
+  - {name: Gentex, website: gentex.com}
+  - {name: Steelcase, website: steelcase.com}
+  - {name: MillerKnoll, website: millerknoll.com}
+  - {name: Meijer, website: meijer.com}
+  - {name: Gordon Food Service, website: gfs.com}
+  - {name: Amway, website: amway.com}
+  - {name: Wolverine Worldwide, website: wolverineworldwide.com}
+  - {name: SpartanNash, website: spartannash.com}
+  - {name: Acrisure, website: acrisure.com}
+  - {name: Atomic Object, website: atomicobject.com}
+  - {name: OST (Open Systems Technologies), website: ostusa.com}
+  - {name: Mutually Human, website: mutuallyhuman.com}
+  - {name: Plante Moran, website: plantemoran.com}
+  - {name: Rehmann, website: rehmann.com}
+  - {name: Consumers Energy, website: consumersenergy.com}
+  - {name: Western Michigan University, website: wmich.edu}
+  - {name: Andrews University, website: andrews.edu}
+  - {name: Southwestern Michigan College, website: swmich.edu}
+  - {name: Vail Rubber Works, website: vailrubber.com}
+  - {name: Michigan Medicine (Ann Arbor), website: uofmhealth.org}
+  - {name: Domino's (Ann Arbor), website: dominos.com, careers: "https://jobs.dominos.com/us/en"}
+
+chicago_and_national:
+  # Bigger Chicago-area employers with internship programs. Their non-Chicago
+  # postings are dropped by the region filter. Big tech is mostly covered by
+  # the Simplify community list already.
+  - {name: Morningstar, website: morningstar.com}
+  - {name: CDW, website: cdw.com}
+  - {name: Motorola Solutions, website: motorolasolutions.com, ats: workday, host: motorolasolutions.wd5.myworkdayjobs.com, tenant: motorolasolutions, site: Careers}
+  - {name: Allstate, website: allstate.com}
+  - {name: Discover Financial, website: discover.com}
+  - {name: Northern Trust, website: northerntrust.com}
+  - {name: BMO, website: bmo.com}
+  - {name: Abbott, website: abbott.com}
+  - {name: AbbVie, website: abbvie.com}
+  - {name: Walgreens, website: walgreens.com}
+  - {name: United Airlines, website: united.com}
+  - {name: Kraft Heinz, website: kraftheinzcompany.com}
+  - {name: McDonald's, website: mcdonalds.com}
+  - {name: Hyatt, website: hyatt.com}
+  - {name: Exelon / ComEd, website: exeloncorp.com}
+  - {name: Zebra Technologies, website: zebra.com}
+  - {name: Aon, website: aon.com}
+  - {name: Arthur J. Gallagher, website: ajg.com}
+  - {name: Kemper, website: kemper.com}
+  - {name: Paylocity, website: paylocity.com}
+  - {name: Sprout Social, website: sproutsocial.com}
+  - {name: Relativity, website: relativity.com}
+  - {name: Cboe, website: cboe.com}
+  - {name: CME Group, website: cmegroup.com}
+  - {name: TransUnion, website: transunion.com}
+  - {name: Ulta Beauty, website: ulta.com}
+  - {name: Grainger, website: grainger.com}
+  - {name: Baxter, website: baxter.com}
+  - {name: Medline, website: medline.com}
+  - {name: Old Republic, website: oldrepublic.com}
+  - {name: Guaranteed Rate (Rate), website: rate.com}
+  - {name: Grubhub, website: grubhub.com}
+  - {name: Groupon, website: groupon.com}
+  - {name: project44, website: project44.com}
+  - {name: Tempus AI, website: tempus.com}
+  - {name: Echo Global Logistics, website: echo.com}
+  - {name: Coyote Logistics, website: coyote.com}
+  - {name: Crate & Barrel, website: crateandbarrel.com}
+  - {name: Hub International, website: hubinternational.com}
+  - {name: Deloitte, website: deloitte.com}
+  - {name: EY, website: ey.com}
+  - {name: PwC, website: pwc.com}
+  - {name: KPMG, website: kpmg.com}
+  - {name: RSM US, website: rsmus.com}
+  - {name: Grant Thornton, website: grantthornton.com}
+  - {name: Baker Tilly, website: bakertilly.com}
+  - {name: Protiviti, website: protiviti.com}
+  - {name: West Monroe, website: westmonroe.com}
+  - {name: Accenture, website: accenture.com}
+  - {name: Federal Reserve Bank of Chicago, website: chicagofed.org}

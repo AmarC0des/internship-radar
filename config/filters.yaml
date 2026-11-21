@@ -1,0 +1,427 @@
+# What counts as a match. Edit freely: the next run picks it up.
+# All matching is case-insensitive and on whole words.
+
+# A posting must look like an internship / co-op.
+internship_terms:
+  - intern
+  - interns
+  - internship
+  - co-op
+  - coop
+  - summer analyst
+  - summer associate
+  - student worker
+  - student associate
+  - student assistant
+  - student intern
+
+# Titles containing any of these are dropped even if they say "intern".
+exclude_terms:
+  - internal
+  - international
+  - internist
+  - nurse
+  - nursing
+  - rn
+  - cna
+  - pharmacy
+  - pharmacist
+  - physician
+  - medical intern
+  - clinical
+  - physical therapy
+  - occupational therapy
+  - dietetic
+  - veterinary
+  - high school
+  - teacher
+  - teaching
+  - ministry
+  - chaplain
+  - culinary
+  - landscaping
+  - lifeguard
+  - welding
+  - welder
+  - machinist
+  - tool and die
+  - tool & die
+  - diesel
+  - automotive technician
+  - phd
+  - ph.d
+  - postdoc
+  - mba
+
+# Fields we care about. A title (or category text) hitting any term gets that tag.
+# Jobs with no tag are dropped — except a bare "Intern"/"Summer Intern" at a local
+# company, which is kept and tagged "General" because it's worth a look.
+categories:
+  Software:
+    - software
+    - developer
+    - software development
+    - web development
+    - programmer
+    - programming
+    - web
+    - full stack
+    - full-stack
+    - frontend
+    - front end
+    - backend
+    - back end
+    - mobile
+    - ios
+    - android
+    - devops
+    - cloud
+    - sre
+    - site reliability
+    - qa
+    - quality assurance
+    - test automation
+    - computer science
+    - application
+    - applications
+    - automation engineer
+    - embedded
+    - firmware
+    - game
+  IT:
+    - it
+    - information technology
+    - help desk
+    - helpdesk
+    - service desk
+    - desktop support
+    - technical support
+    - tech support
+    - network
+    - networking
+    - systems
+    - system administrator
+    - sysadmin
+    - infrastructure
+    - technology
+    - technical
+    - erp
+    - sap
+    - salesforce
+    - crm
+    - database
+    - digital
+    - information systems
+    - mis
+  Cybersecurity:
+    - cyber
+    - cybersecurity
+    - security
+    - infosec
+    - information security
+    - soc
+    - grc
+    - identity
+    - vulnerability
+    - penetration
+  Data & AI:
+    - data
+    - analytics
+    - analyst
+    - business intelligence
+    - bi
+    - machine learning
+    - ml
+    - ai
+    - artificial intelligence
+    - statistics
+    - statistical
+    - quantitative
+    - quant
+    - research analyst
+    - reporting
+  Audit & Finance:
+    - audit
+    - it audit
+    - assurance
+    - risk
+    - compliance
+    - accounting
+    - accountant
+    - finance
+    - financial
+    - treasury
+    - tax
+    - fp&a
+    - credit
+    - actuarial
+    - investment
+    - banking
+  Business:
+    - business
+    - operations
+    - supply chain
+    - logistics
+    - procurement
+    - purchasing
+    - product
+    - project management
+    - project manager
+    - program management
+    - consulting
+    - consultant
+    - strategy
+    - sales operations
+    - marketing analytics
+    - ecommerce
+    - e-commerce
+    - management
+    - administration
+    - economics
+    - continuous improvement
+    - process improvement
+
+# Words that mark a title as engineering-but-not-software. These only remove a job
+# if it got no other tag (so "Mechanical Engineering Intern" is out, but
+# "Software Engineering Intern" stays in).
+non_cs_engineering:
+  - mechanical
+  - civil
+  - chemical
+  - electrical
+  - manufacturing
+  - industrial
+  - process engineer
+  - quality engineer
+  - design engineer
+  - structural
+  - environmental
+  - construction
+  - production
+  - maintenance
+  - warehouse
+  - safety
+  - ehs
+  - human resources
+  - hr
+  - recruiting
+  - marketing
+  - communications
+  - graphic design
+  - legal
+  - paralegal
+
+# Where. A job matches a region if one of its cities AND that region's state appear
+# in the location text. "Remote" matches when the posting says remote/virtual and
+# doesn't name a non-US country.
+regions:
+  Northern Indiana:
+    states: [IN, Indiana]
+    cities:
+      # South Bend / Elkhart / Marshall
+      - South Bend
+      - Mishawaka
+      - Granger
+      - Notre Dame
+      - Osceola
+      - New Carlisle
+      - North Liberty
+      - Walkerton
+      - Lakeville
+      - Elkhart
+      - Goshen
+      - Middlebury
+      - Bristol
+      - Nappanee
+      - Wakarusa
+      - Millersburg
+      - Plymouth
+      - Bremen
+      - Bourbon
+      - Culver
+      - Argos
+      # Kosciusko / Warsaw and northeast
+      - Warsaw
+      - Winona Lake
+      - Syracuse
+      - Milford
+      - Leesburg
+      - Pierceton
+      - North Webster
+      - Columbia City
+      - Ligonier
+      - LaGrange
+      - Shipshewana
+      - Howe
+      - Kendallville
+      - Angola
+      - Auburn
+      - Garrett
+      - Fort Wayne
+      - New Haven
+      - Huntington
+      - Wabash
+      - North Manchester
+      - Rochester
+      - Logansport
+      # LaPorte / Northwest Indiana
+      - La Porte
+      - LaPorte
+      - Michigan City
+      - Knox
+      - Valparaiso
+      - Chesterton
+      - Porter
+      - Portage
+      - Burns Harbor
+      - Merrillville
+      - Crown Point
+      - Hobart
+      - Gary
+      - Hammond
+      - Munster
+      - Highland
+      - Schererville
+      - Dyer
+      - St. John
+      - Lowell
+      - Cedar Lake
+      - Whiting
+      - East Chicago
+      - Griffith
+      - Lake Station
+    phrases: [Northern Indiana, Northwest Indiana, Michiana]
+  Southern Michigan:
+    states: [MI, Michigan]
+    cities:
+      - Kalamazoo
+      - Portage
+      - Parchment
+      - Mattawan
+      - Richland
+      - Galesburg
+      - Vicksburg
+      - Plainwell
+      - Otsego
+      - Allegan
+      - Paw Paw
+      - Battle Creek
+      - Marshall
+      - Albion
+      - Coldwater
+      - Sturgis
+      - Three Rivers
+      - Cassopolis
+      - Edwardsburg
+      - Dowagiac
+      - Niles
+      - Buchanan
+      - Berrien Springs
+      - Bridgman
+      - Stevensville
+      - St. Joseph
+      - Saint Joseph
+      - Benton Harbor
+      - South Haven
+      - Holland
+      - Zeeland
+      - Grand Rapids
+      - Wyoming
+      - Kentwood
+      - Grandville
+      - Walker
+      - Ada
+      - Hastings
+      - Lansing
+      - East Lansing
+      - Okemos
+      - Jackson
+      - Hillsdale
+      - Ann Arbor
+      - Ypsilanti
+    phrases: [Southwest Michigan, West Michigan]
+  Chicago Area:
+    states: [IL, Illinois]
+    cities:
+      - Chicago
+      - Evanston
+      - Skokie
+      - Oak Brook
+      - Oakbrook Terrace
+      - Downers Grove
+      - Lisle
+      - Naperville
+      - Aurora
+      - Warrenville
+      - Wheaton
+      - Lombard
+      - Itasca
+      - Schaumburg
+      - Hoffman Estates
+      - Rolling Meadows
+      - Arlington Heights
+      - Elk Grove Village
+      - Rosemont
+      - Des Plaines
+      - Park Ridge
+      - Glenview
+      - Northbrook
+      - Deerfield
+      - Riverwoods
+      - Lincolnshire
+      - Vernon Hills
+      - Mettawa
+      - Lake Forest
+      - North Chicago
+      - Libertyville
+      - Waukegan
+      - Bannockburn
+      - Northfield
+      - Westchester
+      - Hinsdale
+      - Bolingbrook
+      - Romeoville
+      - Joliet
+      - Oak Lawn
+      - Chicago Heights
+      - Elmhurst
+      - Addison
+      - Wood Dale
+      - Bensenville
+      - Franklin Park
+      - Mount Prospect
+      - Buffalo Grove
+      - Wheeling
+    phrases: [Chicagoland, Greater Chicago]
+
+include_remote: true
+
+# Remote postings that name any of these are treated as non-US and dropped.
+non_us_markers:
+  - canada
+  - ontario
+  - toronto
+  - vancouver
+  - montreal
+  - mexico
+  - brazil
+  - uk
+  - united kingdom
+  - london
+  - ireland
+  - germany
+  - france
+  - spain
+  - italy
+  - poland
+  - netherlands
+  - india
+  - philippines
+  - china
+  - japan
+  - singapore
+  - australia
+  - emea
+  - apac
+  - latam
+  - europe
