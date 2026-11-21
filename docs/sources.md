@@ -1,8 +1,8 @@
-# Source health — Nov 20, 2026 10:23 PM ET
+# Source health — Nov 21, 2026 12:58 PM ET
 
-82 of 201 company boards returned postings this run.
+85 of 201 company boards returned postings this run.
 
-- **Simplify (Pitt CSC) list**: 5130 postings
+- **Simplify (Pitt CSC) list**: 5122 postings
 - **Adzuna**: 0 postings
 
 Companies with **0 postings and an error** need a look: open their careers page, copy the job-board
@@ -29,13 +29,13 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | chicago_and_national | Echo Global Logistics | [workday](echo.com) | 4 |  |
 | chicago_and_national | Exelon / ComEd | [jibe](https://jobs.exeloncorp.com/careers-home/) | 7 |  |
 | chicago_and_national | EY | [sf_rmk](https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch&local=en_US) | 31 |  |
-| chicago_and_national | Federal Reserve Bank of Chicago | [workday](https://www.chicagofed.org/) | 46 |  |
+| chicago_and_national | Federal Reserve Bank of Chicago | [workday](https://www.chicagofed.org/) | 41 |  |
 | chicago_and_national | Grainger | none | 0 | no careers page found |
 | chicago_and_national | Grant Thornton | [oracle](https://grantthornton.com/) | 163 |  |
 | chicago_and_national | Groupon | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.groupon.com/ |
 | chicago_and_national | Grubhub | none | 0 | no careers page found |
 | chicago_and_national | Guaranteed Rate (Rate) | [workday](https://rate.wd108.myworkdayjobs.com/Guaranteed_Rate_Inc_External) | 0 |  |
-| chicago_and_national | Hub International | [phenom](https://careers.hubinternational.com/us/en) | 100 |  |
+| chicago_and_national | Hub International | [phenom](https://careers.hubinternational.com/us/en) | 101 |  |
 | chicago_and_national | Hyatt | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.hyatt.com/ |
 | chicago_and_national | Kemper | [workday](https://careers.kemper.com/) | 0 |  |
 | chicago_and_national | KPMG | [page](https://kpmg.com/xx/en/careers/job-search.html) | 0 |  |
@@ -94,7 +94,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Forvis Mazars | [page](https://www.forvismazars.us/careers) | 0 |  |
 | northern_indiana | Franciscan Health | [phenom](https://jobs.franciscanhealth.org/us/en) | 18 |  |
 | northern_indiana | Franklin Electric | [pinpoint](franklin-electric.com) | 85 |  |
-| northern_indiana | General Motors Fort Wayne Assembly | [workday](gm.com) | 73 |  |
+| northern_indiana | General Motors Fort Wayne Assembly | [workday](gm.com) | 72 |  |
 | northern_indiana | Goshen College | [page](https://www.goshen.edu/undergraduate-programs/global-education/) | 1 |  |
 | northern_indiana | Goshen Health | [page](https://goshenhealth.com/about/careers/provider-opportunities) | 2 |  |
 | northern_indiana | Grace College | [page](https://www.grace.edu/academics/center-for-career-connections/) | 0 |  |
@@ -119,9 +119,9 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Lake City Bank | [adp](lakecitybank.com) | 9 |  |
 | northern_indiana | LaSalle Bristol | none | 0 | ConnectionError: HTTPSConnectionPool(host='lasallebristol.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionErro |
 | northern_indiana | LEER Group | none | 0 | HTTPError: 406 Client Error: Not Acceptable for url: https://www.leer.com/ |
-| northern_indiana | Lincoln Financial | [sf_rmk](lincolnfinancial.com) | 74 |  |
+| northern_indiana | Lincoln Financial | [sf_rmk](lincolnfinancial.com) | 72 |  |
 | northern_indiana | Lippert | [jibe](lippert.com) | 4 |  |
-| northern_indiana | Lutheran Health Network | [oracle](https://jobs.chs.net/hospitals/bluffton-regional-medical-center) | 0 | HTTPError: 503 Server Error: Service Unavailable for url: https://fa-evxo-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/rec |
+| northern_indiana | Lutheran Health Network | [oracle](https://jobs.chs.net/hospitals/bluffton-regional-medical-center) | 157 |  |
 | northern_indiana | Maple Leaf Farms | [ukg](https://www.mapleleaffarms.com/pages/careers) | 14 |  |
 | northern_indiana | Martin's Super Markets | none | 0 | ConnectionError: HTTPSConnectionPool(host='www.martinsupermarkets.com', port=443): Max retries exceeded with url: / (Caused by NameResolu |
 | northern_indiana | Matrix Integration | [page](https://www.matrixintegration.com/careers/) | 0 |  |
@@ -150,7 +150,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Ruoff Mortgage | [paylocity](https://ruoff.com/careers) | 2 |  |
 | northern_indiana | Saint Joseph Health System | [workday](https://jobs.trinity-health.org/sjhs/c/nursing-jobs) | 19 |  |
 | northern_indiana | Shyft Group | [page](https://theshyftgroup.com/careers/) | 0 |  |
-| northern_indiana | Sinclair Broadcast (WSBT) | [oracle](https://wsbt.com/) | 0 | HTTPError: 503 Server Error: Service Unavailable for url: https://edyy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobReq |
+| northern_indiana | Sinclair Broadcast (WSBT) | [oracle](https://wsbt.com/) | 80 |  |
 | northern_indiana | South Bend Community School Corp | none | 0 | ConnectTimeout: HTTPSConnectionPool(host='www.sbcsc.k12.in.us', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr |
 | northern_indiana | St. Joseph County Government | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.sjcindiana.gov/ |
 | northern_indiana | STAR Financial Bank | [ukg](https://www.starfinancial.com/careers) | 15 |  |
@@ -162,12 +162,12 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Tecomet | [page](https://tecomet.com/careers/) | 0 |  |
 | northern_indiana | Thor Industries | [adp](https://www.thorindustries.com:443/careers) | 19 |  |
 | northern_indiana | U.S. Steel | [page](https://www.ussteel.com/early-career) | 1 |  |
-| northern_indiana | University of Notre Dame | [smartrecruiters](nd.edu) | 27 |  |
+| northern_indiana | University of Notre Dame | [smartrecruiters](nd.edu) | 24 |  |
 | northern_indiana | Urschel Laboratories | none | 0 | no careers page found |
 | northern_indiana | Valparaiso University | [page](https://www.valpo.edu/) | 0 |  |
 | northern_indiana | Vera Bradley | [workday](https://verabradley.com/pages/careers) | 0 |  |
 | northern_indiana | Winnebago Industries (Newmar) | [adp](https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=82c90207-af7d-495b-b437-aa9a4c72f4e8&ccId=19000101_000001&type=JS&lang=en_US&selectedMenuKey=CareerCenter) | 44 |  |
-| northern_indiana | Zimmer Biomet | [phenom](zimmerbiomet.com) | 31 |  |
+| northern_indiana | Zimmer Biomet | [phenom](zimmerbiomet.com) | 32 |  |
 | southwest_michigan | Acrisure | [phenom](https://careers.acrisure.com/us/en) | 2 |  |
 | southwest_michigan | Advia Credit Union | [page](https://www.adviacu.org/about/company-profile/careers) | 0 |  |
 | southwest_michigan | Amway | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.amway.com/ |
@@ -197,7 +197,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | southwest_michigan | OST (Open Systems Technologies) | none | 0 | SSLError: HTTPSConnectionPool(host='www.ostusa.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerifi |
 | southwest_michigan | Parker Hannifin Kalamazoo | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.parker.com/ |
 | southwest_michigan | Perrigo | [successfactors](https://careers.perrigo.com/) | 0 |  |
-| southwest_michigan | Pfizer Kalamazoo | [workday](pfizer.com) | 0 |  |
+| southwest_michigan | Pfizer Kalamazoo | [workday](pfizer.com) | 1 |  |
 | southwest_michigan | Plante Moran | [workday](https://careers.plantemoran.com/jobs?keyword=intern) | 31 |  |
 | southwest_michigan | Post Consumer Brands | [icims](https://jobs.postholdings.com/postconsumerbrands-home) | 0 |  |
 | southwest_michigan | Rehmann | [workday](https://www.rehmann.com/careers/) | 12 |  |

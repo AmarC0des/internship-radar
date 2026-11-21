@@ -771,7 +771,7 @@
  "Lutheran Health Network": {
   "ats": "oracle",
   "careers_url": "https://jobs.chs.net/hospitals/bluffton-regional-medical-center",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "fa-evxo-saasfaprod1.fa.ocs.oraclecloud.com",
   "site": "CX_1",
   "v": 2
@@ -1118,7 +1118,7 @@
  "Sinclair Broadcast (WSBT)": {
   "ats": "oracle",
   "careers_url": "https://wsbt.com/",
-  "detected": "2000-01-01",
+  "detected": "2026-11-21",
   "host": "edyy.fa.us2.oraclecloud.com",
   "site": "CX_2002",
   "v": 2
