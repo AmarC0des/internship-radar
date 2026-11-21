@@ -7,9 +7,25 @@ from functools import lru_cache
 from .models import Job
 
 STRONG = {"Software", "IT", "Cybersecurity", "Data & AI", "Audit & Finance"}
-BARE_INTERN_RE = re.compile(
-    r"^\s*(\d{4}\s+)?((summer|fall|spring|winter|year[- ]round|paid|part[- ]time|full[- ]time)\s+)*"
-    r"(intern|internship|co-?op|student intern)(\s*[-–(,].*)?$",
+# Business roles that stay in even next to a word like "manufacturing" ("Manufacturing Supply Chain Intern").
+SOLID_BUSINESS = ["supply chain", "logistics", "procurement", "purchasing", "business analyst",
+                  "project management", "program management", "operations analyst", "strategy"]
+# Words that say nothing about the field. A title made only of these (plus our city/state
+# names) is a "bare" internship like "Summer Intern - Elkhart (2027)".
+NOISE_RE = re.compile(
+    r"\b(\d{4}|summer|fall|spring|winter|year[- ]round|paid|unpaid|part[- ]time|full[- ]time|seasonal|"
+    r"intern|interns|internship|internships|co-?op|coop|student|general|program|position|opportunity|"
+    r"us|usa|united states|in|mi|il|indiana|michigan|illinois|remote|hybrid|onsite|on-site)\b",
+    re.I,
+)
+# Countries/regions that mean "not in the US" when they appear in a location.
+FOREIGN_RE = re.compile(
+    r"\b(poland|netherlands|noord-holland|germany|deutschland|france|spain|italy|portugal|ireland|"
+    r"united kingdom|uk|england|scotland|belgium|switzerland|austria|sweden|denmark|norway|finland|"
+    r"czech|hungary|romania|bulgaria|greece|turkey|israel|india|china|japan|korea|singapore|malaysia|"
+    r"philippines|vietnam|thailand|indonesia|australia|new zealand|canada|mexico|brazil|argentina|"
+    r"chile|colombia|peru|costa rica|puerto rico|south africa|egypt|uae|united arab emirates|"
+    r"saudi arabia|qatar|europe|emea|apac|latam)\b",
     re.I,
 )
 
@@ -69,9 +85,17 @@ class Filter:
 
     def tag(self, title: str) -> list[str]:
         tags = [cat for cat, terms in self.categories.items() if _any(terms, title)]
-        if _any(self.non_cs, title) and not (set(tags) & STRONG):
+        if _any(self.non_cs, title) and not (set(tags) & STRONG) and not _any(SOLID_BUSINESS, title):
             return []
         return tags
+
+    def is_bare(self, title: str) -> bool:
+        core = re.sub(r"\(.*?\)|\[.*?\]", " ", title)
+        core = NOISE_RE.sub(" ", core)
+        for _, _, cities, _ in self.regions:
+            for c in cities:
+                core = c.sub(" ", core)
+        return not re.sub(r"[\W_]+", "", core)
 
     # ---- where ----
     def region_of(self, job: Job) -> str:
@@ -83,7 +107,11 @@ class Filter:
                     return name
                 if any(c.search(seg) for c in cities):
                     # City + matching state, or (for our local companies) a bare city name.
-                    if state_rx.search(seg) or (job.local_company and not US_STATE_RX.search(seg)):
+                    if state_rx.search(seg):
+                        return name
+                    # A bare city ("Mishawaka", "Elkhart - Plant 3") from a single-site local employer.
+                    if job.local_company and not US_STATE_RX.search(seg) and not FOREIGN_RE.search(seg) \
+                            and not _any(self.non_us, seg):
                         return name
         if self.include_remote and (job.remote or re.search(r"\b(remote|virtual|work from home|wfh|anywhere)\b", loc, re.I)):
             if not _any(self.non_us, loc):
@@ -99,7 +127,7 @@ class Filter:
             return None
         tags = self.tag(title)
         if not tags:
-            if job.local_company and BARE_INTERN_RE.match(title):
+            if job.local_company and self.is_bare(title):
                 tags = ["General"]
             else:
                 return None

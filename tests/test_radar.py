@@ -324,3 +324,44 @@ def test_stale_cache_is_redetected(monkeypatch):
     assert b["slug"] == "new" and b["v"] == main.ats.DETECT_VERSION
     fresh = {"Acme": {"ats": "lever", "slug": "x", "detected": "2026-11-20", "v": main.ats.DETECT_VERSION}}
     assert main.board_for({"name": "Acme", "website": "acme.com"}, fresh, None, today, False)["ats"] == "lever"
+
+
+@pytest.mark.parametrize("title,loc,local,ok", [
+    # rows that were wrong in the 2nd live run
+    ("Discover Internship, Finance, Intercompany", "Warsaw, Poland", True, False),
+    ("Intern Bachelors - Engineering Program Management (m/f/d)", "Amsterdam, Noord-Holland, Netherlands", True, False),
+    ("Intern, Human Resources, South Bend, IN (Summer 2027)", "South Bend, IN", True, False),
+    ("Intern, Legal Department, South Bend, IN", "South Bend, IN", True, False),
+    ("2027 Co-op – Mechanical Engineer", "Lansing, Michigan", True, False),
+    ("Summer 2027 Internship - RA/QA - Regulatory Affairs - Michigan", "Portage, Michigan", False, False),
+    ("Digital Marketing Intern", "", True, False),
+    # still kept
+    ("Intern", "Mishawaka, Indiana", True, True),
+    ("Summer Intern - Elkhart (2027)", "Elkhart, IN", True, True),
+    ("IT/OT Security Intern", "Kalamazoo - Kilgore Road", True, True),
+    ("Intern, Information Security, South Bend, IN (Summer 2027)", "South Bend, IN", True, True),
+    ("Marketing Analyst Intern", "", True, True),
+])
+def test_second_run_regressions(title, loc, local, ok):
+    assert (FLT.apply(Job("Acme", title, loc, "u", "x", local_company=local)) is not None) == ok
+
+
+def test_multi_site_detection():
+    from radar.main import _is_multi_site
+    mk = lambda *locs: [Job("A", "t", l, "u", "x") for l in locs]
+    assert _is_multi_site(mk("Warsaw, Indiana", "Warsaw, Poland"))
+    assert _is_multi_site(mk("Portage, Michigan", "Mahwah, New Jersey"))
+    assert not _is_multi_site(mk("South Bend, IN", "Niles, MI", "Elkhart, IN"))
+    assert not _is_multi_site(mk("Mishawaka", ""))
+
+
+def test_page_scan_skips_articles():
+    html = ('<a href="/blog/1">Career Takeoff: Kaylee’s Journey From Intern To Director Of Lending</a>'
+            '<a href="/jobs/2">Data Engineering Intern</a>')
+    jobs = ats.fetch_page(FakeSession([(r"acme", html)]), "Acme", {"url": "https://acme.com/careers"})
+    assert [j.title for j in jobs] == ["Data Engineering Intern"]
+
+
+def test_supply_chain_survives_manufacturing_word():
+    assert FLT.apply(Job("GM", "2027 Summer Intern – Manufacturing Supply Chain", "Lansing, Michigan", "u", "x"))
+    assert not FLT.apply(Job("GM", "Manufacturing Engineering Intern", "Lansing, Michigan", "u", "x"))

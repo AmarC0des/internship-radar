@@ -115,7 +115,7 @@ northern_indiana:
   - {name: Pyromation, website: pyromation.com}
   - {name: Horizon Bank, website: horizonbank.com}
   # --- Northwest Indiana / LaPorte ----------------------------------------
-  - {name: NiSource (NIPSCO), website: nisource.com}
+  - {name: NiSource (NIPSCO), website: nisource.com, ats: workday, host: nisource.wd1.myworkdayjobs.com, tenant: nisource, site: NiSource}
   - {name: Centier Bank, website: centier.com}
   - {name: Peoples Bank (Munster), website: ibankpeoples.com}
   - {name: Community Healthcare System, website: comhs.org}
@@ -126,7 +126,7 @@ northern_indiana:
   - {name: Family Express, website: familyexpress.net}
   - {name: U.S. Steel, website: ussteel.com}
   - {name: Cleveland-Cliffs, website: clevelandcliffs.com}
-  - {name: BP Whiting, website: bp.com}
+  - {name: BP Whiting, website: bp.com, ats: workday, host: bpinternational.wd3.myworkdayjobs.com, tenant: bpinternational, site: bpCareers}
   - {name: Valparaiso University, website: valpo.edu}
   - {name: Howmet Aerospace LaPorte, website: howmet.com}
   - {name: Northern Indiana Commuter Transportation District, website: nictd.com}
@@ -136,7 +136,7 @@ southwest_michigan:
   - {name: Pfizer Kalamazoo, website: pfizer.com, ats: workday, host: pfizer.wd1.myworkdayjobs.com, tenant: pfizer, site: PfizerCareers}
   - {name: Zoetis, website: zoetis.com, ats: workday, host: zoetis.wd5.myworkdayjobs.com, tenant: zoetis, site: zoetis}
   - {name: Whirlpool Corporation, website: whirlpoolcorp.com}
-  - {name: Kellanova, website: kellanova.com, careers: "https://www.kellanovacareers.com/"}
+  - {name: Kellanova, website: kellanova.com}
   - {name: WK Kellogg Co, website: wkkellogg.com}
   - {name: Post Consumer Brands, website: postconsumerbrands.com}
   - {name: Bronson Healthcare, website: bronsonhealth.com, ats: workday, host: bronsonhg.wd1.myworkdayjobs.com, tenant: bronsonhg, site: newhires}
@@ -156,11 +156,11 @@ southwest_michigan:
   - {name: Perrigo, website: perrigo.com}
   - {name: Gentex, website: gentex.com}
   - {name: Steelcase, website: steelcase.com}
-  - {name: MillerKnoll, website: millerknoll.com}
+  - {name: MillerKnoll, website: millerknoll.com, ats: workday, host: millerknoll.wd1.myworkdayjobs.com, tenant: millerknoll, site: MillerKnoll}
   - {name: Meijer, website: meijer.com}
-  - {name: Gordon Food Service, website: gfs.com}
+  - {name: Gordon Food Service, website: gfs.com, ats: workday, host: gfs.wd5.myworkdayjobs.com, tenant: gfs, site: usjobs-gen-gfs}
   - {name: Amway, website: amway.com}
-  - {name: Wolverine Worldwide, website: wolverineworldwide.com}
+  - {name: Wolverine Worldwide, website: wolverineworldwide.com, ats: workday, host: wwwinc.wd1.myworkdayjobs.com, tenant: wwwinc, site: WWW}
   - {name: SpartanNash, website: spartannash.com}
   - {name: Acrisure, website: acrisure.com}
   - {name: Atomic Object, website: atomicobject.com}
@@ -183,7 +183,7 @@ chicago_and_national:
   - {name: Morningstar, website: morningstar.com}
   - {name: CDW, website: cdw.com}
   - {name: Motorola Solutions, website: motorolasolutions.com, ats: workday, host: motorolasolutions.wd5.myworkdayjobs.com, tenant: motorolasolutions, site: Careers}
-  - {name: Allstate, website: allstate.com}
+  - {name: Allstate, website: allstate.com, ats: workday, host: allstate.wd5.myworkdayjobs.com, tenant: allstate, site: allstate_careers}
   - {name: Discover Financial, website: discover.com}
   - {name: Northern Trust, website: northerntrust.com}
   - {name: BMO, website: bmo.com}
@@ -201,13 +201,13 @@ chicago_and_national:
   - {name: Kemper, website: kemper.com}
   - {name: Paylocity, website: paylocity.com}
   - {name: Sprout Social, website: sproutsocial.com}
-  - {name: Relativity, website: relativity.com}
+  - {name: Relativity, website: relativity.com, ats: workday, host: kcura.wd1.myworkdayjobs.com, tenant: kcura, site: External_Career_Site}
   - {name: Cboe, website: cboe.com}
   - {name: CME Group, website: cmegroup.com}
   - {name: TransUnion, website: transunion.com}
   - {name: Ulta Beauty, website: ulta.com}
   - {name: Grainger, website: grainger.com}
-  - {name: Baxter, website: baxter.com}
+  - {name: Baxter, website: baxter.com, ats: workday, host: baxter.wd1.myworkdayjobs.com, tenant: baxter, site: baxter}
   - {name: Medline, website: medline.com}
   - {name: Old Republic, website: oldrepublic.com}
   - {name: Guaranteed Rate (Rate), website: rate.com}
@@ -215,7 +215,7 @@ chicago_and_national:
   - {name: Groupon, website: groupon.com}
   - {name: project44, website: project44.com}
   - {name: Tempus AI, website: tempus.com}
-  - {name: Echo Global Logistics, website: echo.com}
+  - {name: Echo Global Logistics, website: echo.com, ats: workday, host: echo.wd1.myworkdayjobs.com, tenant: echo, site: Echo_Logistics}
   - {name: Coyote Logistics, website: coyote.com}
   - {name: Crate & Barrel, website: crateandbarrel.com}
   - {name: Hub International, website: hubinternational.com}
@@ -223,10 +223,10 @@ chicago_and_national:
   - {name: EY, website: ey.com}
   - {name: PwC, website: pwc.com}
   - {name: KPMG, website: kpmg.com}
-  - {name: RSM US, website: rsmus.com}
+  - {name: RSM US, website: rsmus.com, ats: workday, host: rsm.wd1.myworkdayjobs.com, tenant: rsm, site: RSMCareers}
   - {name: Grant Thornton, website: grantthornton.com}
   - {name: Baker Tilly, website: bakertilly.com}
-  - {name: Protiviti, website: protiviti.com}
+  - {name: Protiviti, website: protiviti.com, ats: workday, host: roberthalf.wd1.myworkdayjobs.com, tenant: roberthalf, site: ProtivitiNA}
   - {name: West Monroe, website: westmonroe.com}
-  - {name: Accenture, website: accenture.com}
+  - {name: Accenture, website: accenture.com, ats: workday, host: accenture.wd103.myworkdayjobs.com, tenant: accenture, site: AccentureCareers}
   - {name: Federal Reserve Bank of Chicago, website: chicagofed.org}

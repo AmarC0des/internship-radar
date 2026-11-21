@@ -99,12 +99,30 @@ def run_company(company, cache, today, force):
                     pass
             if not board.get("pinned"):
                 board["detected"] = "2000-01-01"  # re-detect next run
+    multi_site = _is_multi_site(jobs)
     for j in jobs:
-        j.local_company = company["local"]
+        # Bare-city and "no location" postings are only trusted from single-region local employers;
+        # Stryker's "Warsaw" might be Poland, GM's "Milford" is in Michigan.
+        j.local_company = company["local"] and not multi_site
         if not j.company:
             j.company = company["name"]
+    status["multi_site"] = multi_site
     status["jobs"] = len(jobs)
     return company["name"], board, jobs, status
+
+
+def _is_multi_site(jobs: list[Job]) -> bool:
+    from .filters import FOREIGN_RE, US_STATE_RX
+    states = set()
+    for j in jobs:
+        for seg in re.split(r";", j.location or ""):
+            if FOREIGN_RE.search(seg):
+                return True
+            for m in US_STATE_RX.finditer(seg):
+                states.add(m.group(0).upper()[:2] if len(m.group(0)) == 2 else m.group(0).lower())
+    names = {"in": "indiana", "mi": "michigan", "il": "illinois"}
+    norm = {names.get(s.lower(), s.lower()) for s in states}
+    return len(norm - {"indiana", "michigan"}) > 0 or len(norm) > 2
 
 
 def main(argv=None) -> int:
@@ -163,7 +181,8 @@ def main(argv=None) -> int:
             print(f"[agg] {label}: {agg_status[label]}")
 
     # Filter + merge duplicates (same company + title from two sources → keep the direct link).
-    local_names = {c["name"].lower() for c in companies if c["local"]}
+    local_names = {c["name"].lower() for c in companies if c["local"]} - \
+        {s["company"].lower() for s in statuses if s.get("multi_site")}
     merged: dict[str, Job] = {}
     for j in raw:
         if j.company.lower() in local_names:

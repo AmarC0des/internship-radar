@@ -585,6 +585,13 @@ def fetch_successfactors(s, name, p):
     return fetch_page(s, name, {"url": f"https://{p['host']}/career?company={p['company_id']}"})
 
 
+def _looks_like_article(t: str) -> bool:
+    """Blog posts and stories that mention interns, e.g. "Career Takeoff: Kaylee's Journey From Intern To Director"."""
+    return bool(re.search(r":\s|\b(journey|story|stories|spotlight|meet|how|why|what|tips|blog|news|"
+                          r"testimonial|alumni|from intern|to director|day in the life)\b", t, re.I)) \
+        or len(t.split()) > 10
+
+
 def fetch_page(s, name, p):
     """Generic fallback: read a careers page and pull anything that looks like an internship.
 
@@ -613,7 +620,7 @@ def fetch_page(s, name, p):
     for a in soup.find_all("a", href=True):
         t = a.get_text(" ", strip=True)
         if 4 <= len(t) <= 120 and INTERN_RE.search(t) and t.lower() not in seen_titles:
-            if re.search(r"^(view|see|learn|apply|explore)\b|programs?$|^internships?$", t, re.I):
+            if re.search(r"^(view|see|learn|apply|explore)\b|programs?$|^internships?$", t, re.I) or _looks_like_article(t):
                 continue
             seen_titles.add(t.lower())
             out.append(Job(name, t, "", urljoin(final, a["href"]), "page"))
@@ -621,7 +628,7 @@ def fetch_page(s, name, p):
         for line in soup.get_text("\n", strip=True).split("\n"):
             line = line.strip()
             if 6 <= len(line) <= 90 and INTERN_RE.search(line) and line.lower() not in seen_titles:
-                if re.search(r"[.!?]$|^(our|we|the|learn|explore|view|apply)\b", line, re.I):
+                if re.search(r"[.!?]$|^(our|we|the|learn|explore|view|apply)\b", line, re.I) or _looks_like_article(line):
                     continue
                 seen_titles.add(line.lower())
                 out.append(Job(name, line, "", final, "page"))
