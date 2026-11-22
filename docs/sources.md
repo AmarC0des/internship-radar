@@ -1,8 +1,8 @@
-# Source health — Nov 21, 2026 12:58 PM ET
+# Source health — Nov 22, 2026 01:30 PM ET
 
 85 of 201 company boards returned postings this run.
 
-- **Simplify (Pitt CSC) list**: 5122 postings
+- **Simplify (Pitt CSC) list**: 5138 postings
 - **Adzuna**: 0 postings
 
 Companies with **0 postings and an error** need a look: open their careers page, copy the job-board
@@ -31,7 +31,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | chicago_and_national | EY | [sf_rmk](https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch&local=en_US) | 31 |  |
 | chicago_and_national | Federal Reserve Bank of Chicago | [workday](https://www.chicagofed.org/) | 41 |  |
 | chicago_and_national | Grainger | none | 0 | no careers page found |
-| chicago_and_national | Grant Thornton | [oracle](https://grantthornton.com/) | 163 |  |
+| chicago_and_national | Grant Thornton | [oracle](https://grantthornton.com/) | 161 |  |
 | chicago_and_national | Groupon | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.groupon.com/ |
 | chicago_and_national | Grubhub | none | 0 | no careers page found |
 | chicago_and_national | Guaranteed Rate (Rate) | [workday](https://rate.wd108.myworkdayjobs.com/Guaranteed_Rate_Inc_External) | 0 |  |
@@ -62,7 +62,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | chicago_and_national | Zebra Technologies | none | 0 | HTTPError: 406 Client Error: Not Acceptable for url: https://www.zebra.com/us/en/about-zebra/careers.html |
 | northern_indiana | 1st Source Bank | [ukg](1stsource.com) | 96 |  |
 | northern_indiana | 3Rivers Federal Credit Union | [page](https://3riversfcu.org/about/careers) | 0 |  |
-| northern_indiana | AM General | [ukg](https://www.amgeneral.com/careers/find-jobs/) | 32 |  |
+| northern_indiana | AM General | [ukg](https://www.amgeneral.com/careers/find-jobs/) | 31 |  |
 | northern_indiana | Ash Brokerage | [workday](https://www.ashbrokerage.com/) | 0 |  |
 | northern_indiana | Aunalytics | [page](aunalytics.com) | 0 |  |
 | northern_indiana | BAE Systems Fort Wayne | none | 0 | no careers page found |
@@ -93,7 +93,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Fort Wayne Metals | [page](https://fwmetals.com/who-we-are/careers) | 0 |  |
 | northern_indiana | Forvis Mazars | [page](https://www.forvismazars.us/careers) | 0 |  |
 | northern_indiana | Franciscan Health | [phenom](https://jobs.franciscanhealth.org/us/en) | 18 |  |
-| northern_indiana | Franklin Electric | [pinpoint](franklin-electric.com) | 85 |  |
+| northern_indiana | Franklin Electric | [pinpoint](franklin-electric.com) | 84 |  |
 | northern_indiana | General Motors Fort Wayne Assembly | [workday](gm.com) | 72 |  |
 | northern_indiana | Goshen College | [page](https://www.goshen.edu/undergraduate-programs/global-education/) | 1 |  |
 | northern_indiana | Goshen Health | [page](https://goshenhealth.com/about/careers/provider-opportunities) | 2 |  |
@@ -101,7 +101,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Grand Design RV | [page](https://www.granddesignrv.com/company/careers) | 0 |  |
 | northern_indiana | Heart City Health | [page](https://healthlincchc.org/join-the-team/employment/) | 0 |  |
 | northern_indiana | Holladay Properties | [paylocity](https://www.holladayproperties.com/about-us/careers/) | 7 |  |
-| northern_indiana | Honeywell Aerospace | [oracle](honeywell.com) | 406 |  |
+| northern_indiana | Honeywell Aerospace | [oracle](honeywell.com) | 404 |  |
 | northern_indiana | Hoosier Tire | [page](https://www.hoosiertire.com/careers) | 0 |  |
 | northern_indiana | Horizon Bank | [page](https://www.horizonbank.com/about/careers) | 0 |  |
 | northern_indiana | Howmet Aerospace LaPorte | none | 0 | no careers page found |
@@ -121,7 +121,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | LEER Group | none | 0 | HTTPError: 406 Client Error: Not Acceptable for url: https://www.leer.com/ |
 | northern_indiana | Lincoln Financial | [sf_rmk](lincolnfinancial.com) | 72 |  |
 | northern_indiana | Lippert | [jibe](lippert.com) | 4 |  |
-| northern_indiana | Lutheran Health Network | [oracle](https://jobs.chs.net/hospitals/bluffton-regional-medical-center) | 157 |  |
+| northern_indiana | Lutheran Health Network | [oracle](https://jobs.chs.net/hospitals/bluffton-regional-medical-center) | 151 |  |
 | northern_indiana | Maple Leaf Farms | [ukg](https://www.mapleleaffarms.com/pages/careers) | 14 |  |
 | northern_indiana | Martin's Super Markets | none | 0 | ConnectionError: HTTPSConnectionPool(host='www.martinsupermarkets.com', port=443): Max retries exceeded with url: / (Caused by NameResolu |
 | northern_indiana | Matrix Integration | [page](https://www.matrixintegration.com/careers/) | 0 |  |
@@ -154,7 +154,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | South Bend Community School Corp | none | 0 | ConnectTimeout: HTTPSConnectionPool(host='www.sbcsc.k12.in.us', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr |
 | northern_indiana | St. Joseph County Government | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.sjcindiana.gov/ |
 | northern_indiana | STAR Financial Bank | [ukg](https://www.starfinancial.com/careers) | 15 |  |
-| northern_indiana | Steel Dynamics | [icims](https://www.steeldynamics.com/careersnew/) | 30 |  |
+| northern_indiana | Steel Dynamics | [icims](https://www.steeldynamics.com/careersnew/) | 29 |  |
 | northern_indiana | Steel Warehouse | [paylocity](https://www.steelwarehouse.com/about/careers/) | 12 |  |
 | northern_indiana | Supreme Corporation | none | 0 | ConnectTimeout: HTTPSConnectionPool(host='www.supremecorp.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr |
 | northern_indiana | Sweetwater | [phenom](sweetwater.com) | 1 |  |
