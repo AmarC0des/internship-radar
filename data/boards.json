@@ -16,13 +16,13 @@
  },
  "AbbVie": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.abbvie.com/",
   "v": 2
  },
  "Abbott": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -61,7 +61,7 @@
  },
  "Amway": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.amway.com/",
   "v": 2
  },
@@ -83,7 +83,7 @@
  },
  "Armstrong International": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.armstronginternational.com/",
   "v": 2
  },
@@ -113,13 +113,13 @@
  },
  "BAE Systems Fort Wayne": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
  "BMO": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='www.bmo.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSCo",
   "v": 2
  },
@@ -133,9 +133,12 @@
   "v": 2
  },
  "Baker Tilly": {
-  "ats": "none",
-  "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.bakertilly.com/",
+  "ats": "workday",
+  "careers_url": "https://www.bakertilly.com/",
+  "detected": "2026-11-25",
+  "host": "bakertilly.wd5.myworkdayjobs.com",
+  "site": "BTCareers",
+  "tenant": "bakertilly",
   "v": 2
  },
  "Baxter": {
@@ -177,13 +180,13 @@
  },
  "CDW": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.cdw.com/content/cdw/en/articles/ai/ai-retail-impact-opportunity",
   "v": 2
  },
  "CME Group": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.cmegroup.com/",
   "v": 2
  },
@@ -243,31 +246,31 @@
  },
  "Coyote Logistics": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 404 Client Error: Unknown site for url: https://coyote.com/",
   "v": 2
  },
  "Crane Composites": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.cranecomposites.com/",
   "v": 2
  },
  "Crate & Barrel": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.crateandbarrel.com/",
   "v": 2
  },
  "Cressy & Everett": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: FORBIDDEN for url: https://www.cressyeverett.com/shared/human/pow.php?return=https%3A%2F%2Fwww.cressye",
   "v": 2
  },
  "Crossroads Bank": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.crossroadsbank.com/",
   "v": 2
  },
@@ -311,7 +314,7 @@
  },
  "Denso Battle Creek": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.denso.com/us-ca/en/careers/locations/",
   "v": 2
  },
@@ -365,8 +368,8 @@
  },
  "Eaton Galesburg": {
   "ats": "none",
-  "detected": "2026-11-21",
-  "error": "ConnectionError: HTTPSConnectionPool(host='www.eaton.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPS",
+  "detected": "2026-11-25",
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.eaton.com/",
   "v": 2
  },
  "Echo Global Logistics": {
@@ -380,13 +383,13 @@
  },
  "Elkhart Brass": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 520 Server Error: <none> for url: https://www.elkhartbrass.com/",
   "v": 2
  },
  "Elkhart County Government": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.elkhartcountyindiana.com/",
   "v": 2
  },
@@ -412,7 +415,7 @@
  },
  "Family Express": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -427,7 +430,7 @@
  },
  "First Federal Savings Bank (Huntington)": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.firstfedhuntington.com', port=443): Max retries exceeded with url: / (Caused by ConnectTim",
   "v": 2
  },
@@ -461,7 +464,7 @@
  },
  "Gentex": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -500,7 +503,7 @@
  },
  "Grainger": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -537,13 +540,13 @@
  },
  "Groupon": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.groupon.com/",
   "v": 2
  },
  "Grubhub": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -604,7 +607,7 @@
  },
  "Howmet Aerospace LaPorte": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -617,7 +620,7 @@
  },
  "Hyatt": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.hyatt.com/",
   "v": 2
  },
@@ -640,7 +643,7 @@
  },
  "Inovateus Solar": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -683,13 +686,13 @@
  },
  "Kellanova": {
   "ats": "none",
-  "detected": "2026-11-21",
-  "error": "HTTPError: 405 Client Error: Method Not Allowed for url: https://www.kellanovacareers.com/",
+  "detected": "2026-11-25",
+  "error": "HTTPError: 405 Client Error: Method Not Allowed for url: https://www.kellanova.com/",
   "v": 2
  },
  "Kem Krest": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -712,7 +715,7 @@
  },
  "Kosciusko Community Hospital (Lutheran)": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='www.kch.com', port=443): Max retries exceeded with url: / (Caused by ProtocolError('Connection",
   "v": 2
  },
@@ -726,7 +729,7 @@
  },
  "Kruggel Lawton CPAs": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "SSLError: HTTPSConnectionPool(host='www.kruggellawton.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCer",
   "v": 2
  },
@@ -747,20 +750,23 @@
  },
  "LEER Group": {
   "ats": "none",
-  "detected": "2026-11-21",
-  "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://www.leer.com/",
+  "detected": "2026-11-25",
+  "error": "no careers page found",
   "v": 2
  },
  "LaSalle Bristol": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='lasallebristol.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionErro",
   "v": 2
  },
  "Lake Michigan Credit Union": {
-  "ats": "none",
-  "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.lmcu.org/",
+  "ats": "workday",
+  "careers_url": "https://www.lmcu.org/about/careers/",
+  "detected": "2026-11-25",
+  "host": "lmcu.wd5.myworkdayjobs.com",
+  "site": "lmcucareersite",
+  "tenant": "lmcu",
   "v": 2
  },
  "Lincoln Financial": {
@@ -792,7 +798,7 @@
  },
  "Martin's Super Markets": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='www.martinsupermarkets.com', port=443): Max retries exceeded with url: / (Caused by NameResolu",
   "v": 2
  },
@@ -806,33 +812,35 @@
  },
  "McDonald's": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.mcdonalds.com/",
   "v": 2
  },
  "Medline": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.medline.com/",
   "v": 2
  },
  "Meijer": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.meijer.com/",
   "v": 2
  },
  "Methodist Hospitals": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.methodisthospitals.org/",
   "v": 2
  },
  "Michigan Medicine (Ann Arbor)": {
-  "ats": "none",
-  "detected": "2026-11-21",
-  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.uofmhealth.org/",
-  "v": 2
+  "ats": "page",
+  "careers_url": "https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/nursing-opportunities-cs-mott-childrens-hospital",
+  "detected": "2026-11-25",
+  "url": "https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/nursing-opportunities-cs-mott-childrens-hospital",
+  "v": 2,
+  "vendor": "own-site"
  },
  "MillerKnoll": {
   "ats": "none",
@@ -875,7 +883,7 @@
  },
  "Northern Indiana Commuter Transportation District": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='www.nictd.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HT",
   "v": 2
  },
@@ -890,13 +898,13 @@
  },
  "Notre Dame FCU": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.ndfcu.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HT",
   "v": 2
  },
  "OST (Open Systems Technologies)": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "SSLError: HTTPSConnectionPool(host='www.ostusa.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerifi",
   "v": 2
  },
@@ -926,13 +934,13 @@
  },
  "Paragon Medical": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.paragonmedical.com/",
   "v": 2
  },
  "Parker Hannifin Kalamazoo": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.parker.com/",
   "v": 2
  },
@@ -975,13 +983,13 @@
  },
  "Petroleum Traders": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='www.petroleumtraders.com', port=443): Max retries exceeded with url: / (Caused by ProtocolErro",
   "v": 2
  },
  "Pilgrim's Pride Plymouth": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://jobs.pilgrims.com/",
   "v": 2
  },
@@ -1033,13 +1041,13 @@
  },
  "PwC": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.pwc.com/",
   "v": 2
  },
  "Pyromation": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.pyromation.com/",
   "v": 2
  },
@@ -1054,7 +1062,7 @@
  },
  "RTX Raytheon Fort Wayne": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.rtx.com/",
   "v": 2
  },
@@ -1125,7 +1133,7 @@
  },
  "South Bend Community School Corp": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.sbcsc.k12.in.us', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr",
   "v": 2
  },
@@ -1155,7 +1163,7 @@
  },
  "St. Joseph County Government": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.sjcindiana.gov/",
   "v": 2
  },
@@ -1182,7 +1190,7 @@
  },
  "Supreme Corporation": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.supremecorp.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr",
   "v": 2
  },
@@ -1203,7 +1211,7 @@
  },
  "Tempus AI": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.tempus.com/",
   "v": 2
  },
@@ -1216,7 +1224,7 @@
  },
  "TransUnion": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.transunion.com/",
   "v": 2
  },
@@ -1237,7 +1245,7 @@
  },
  "United Airlines": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "ConnectionError: HTTPSConnectionPool(host='www.united.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTP",
   "v": 2
  },
@@ -1249,7 +1257,7 @@
  },
  "Urschel Laboratories": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "no careers page found",
   "v": 2
  },
@@ -1334,7 +1342,7 @@
  },
  "Zebra Technologies": {
   "ats": "none",
-  "detected": "2026-11-21",
+  "detected": "2026-11-25",
   "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://www.zebra.com/us/en/about-zebra/careers.html",
   "v": 2
  },
