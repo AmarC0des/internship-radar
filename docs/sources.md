@@ -1,8 +1,8 @@
-# Source health — Nov 25, 2026 03:28 PM ET
+# Source health — Nov 26, 2026 03:10 PM ET
 
-85 of 201 company boards returned postings this run.
+84 of 201 company boards returned postings this run.
 
-- **Simplify (Pitt CSC) list**: 5056 postings
+- **Simplify (Pitt CSC) list**: 5079 postings
 - **Adzuna**: 0 postings
 
 Companies with **0 postings and an error** need a look: open their careers page, copy the job-board
@@ -12,7 +12,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 |---|---|---|---:|---|
 | chicago_and_national | Abbott | none | 0 | no careers page found |
 | chicago_and_national | AbbVie | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.abbvie.com/ |
-| chicago_and_national | Accenture | [workday](accenture.com) | 86 |  |
+| chicago_and_national | Accenture | [workday](accenture.com) | 82 |  |
 | chicago_and_national | Allstate | [workday](allstate.com) | 0 |  |
 | chicago_and_national | Aon | [page](https://jobs.aon.com/) | 0 |  |
 | chicago_and_national | Arthur J. Gallagher | [page](https://jobs.ajg.com/ajg-home) | 2 |  |
@@ -79,7 +79,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Crossroads Bank | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.crossroadsbank.com/ |
 | northern_indiana | Crowe LLP | [phenom](crowe.com) | 41 |  |
 | northern_indiana | Dana Incorporated | [successfactors](https://jobs.dana.com/) | 0 |  |
-| northern_indiana | DePuy Synthes (J&J) | [workday](https://www.careers.jnj.com/en/jobs/?search=intern&location=Warsaw) | 0 |  |
+| northern_indiana | DePuy Synthes (J&J) | [workday](https://www.careers.jnj.com/en/jobs/?search=intern&location=Warsaw) | 4 |  |
 | northern_indiana | Dexter Group | [page](https://www.dextergroup.com/careers/?category=&positionType=&location=&zipcode=&radius=20&keyword=cdl) | 0 |  |
 | northern_indiana | Do it Best | [page](https://www.doitbestcareers.com/) | 2 |  |
 | northern_indiana | Elkhart Brass | none | 0 | HTTPError: 520 Server Error: <none> for url: https://www.elkhartbrass.com/ |
@@ -94,9 +94,9 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Forvis Mazars | [page](https://www.forvismazars.us/careers) | 0 |  |
 | northern_indiana | Franciscan Health | [phenom](https://jobs.franciscanhealth.org/us/en) | 16 |  |
 | northern_indiana | Franklin Electric | [pinpoint](franklin-electric.com) | 82 |  |
-| northern_indiana | General Motors Fort Wayne Assembly | [workday](gm.com) | 78 |  |
+| northern_indiana | General Motors Fort Wayne Assembly | [workday](gm.com) | 77 |  |
 | northern_indiana | Goshen College | [page](https://www.goshen.edu/undergraduate-programs/global-education/) | 1 |  |
-| northern_indiana | Goshen Health | [page](https://goshenhealth.com/about/careers/provider-opportunities) | 2 |  |
+| northern_indiana | Goshen Health | [page](https://goshenhealth.com/about/careers/provider-opportunities) | 0 |  |
 | northern_indiana | Grace College | [page](https://www.grace.edu/academics/center-for-career-connections/) | 0 |  |
 | northern_indiana | Grand Design RV | [page](https://www.granddesignrv.com/company/careers) | 0 |  |
 | northern_indiana | Heart City Health | [page](https://healthlincchc.org/join-the-team/employment/) | 0 |  |
@@ -125,7 +125,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Maple Leaf Farms | [ukg](https://www.mapleleaffarms.com/pages/careers) | 15 |  |
 | northern_indiana | Martin's Super Markets | none | 0 | ConnectionError: HTTPSConnectionPool(host='www.martinsupermarkets.com', port=443): Max retries exceeded with url: / (Caused by NameResolu |
 | northern_indiana | Matrix Integration | [page](https://www.matrixintegration.com/careers/) | 0 |  |
-| northern_indiana | Medtronic Warsaw | [workday](medtronic.com) | 35 |  |
+| northern_indiana | Medtronic Warsaw | [workday](medtronic.com) | 32 |  |
 | northern_indiana | Methodist Hospitals | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.methodisthospitals.org/ |
 | northern_indiana | MIE (Medical Informatics Engineering) | [greenhouse](https://mieweb.org/) | 9 |  |
 | northern_indiana | MORryde | [paylocity](morryde.com) | 9 |  |
@@ -136,7 +136,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Orchid Orthopedic Solutions | [workday](https://www.orchid-ortho.com/Contact/Careers) | 0 |  |
 | northern_indiana | OrthoPediatrics | [adp](https://www.orthopediatrics.com/about-us/careers/?lang=de) | 4 |  |
 | northern_indiana | Paragon Medical | none | 0 | HTTPError: 429 Client Error: Too Many Requests for url: https://www.paragonmedical.com/ |
-| northern_indiana | Parkview Health | [oracle](https://www.parkview.com/) | 72 |  |
+| northern_indiana | Parkview Health | [oracle](https://www.parkview.com/) | 71 |  |
 | northern_indiana | Patrick Industries | [sf_rmk](patrickind.com) | 9 |  |
 | northern_indiana | Peoples Bank (Munster) | [page](https://www.ibankpeoples.com/early-career) | 0 |  |
 | northern_indiana | Petroleum Traders | none | 0 | ConnectionError: HTTPSConnectionPool(host='www.petroleumtraders.com', port=443): Max retries exceeded with url: / (Caused by ProtocolErro |
@@ -150,10 +150,10 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Ruoff Mortgage | [paylocity](https://ruoff.com/careers) | 3 |  |
 | northern_indiana | Saint Joseph Health System | [workday](https://jobs.trinity-health.org/sjhs/c/nursing-jobs) | 23 |  |
 | northern_indiana | Shyft Group | [page](https://theshyftgroup.com/careers/) | 0 |  |
-| northern_indiana | Sinclair Broadcast (WSBT) | [oracle](https://wsbt.com/) | 83 |  |
+| northern_indiana | Sinclair Broadcast (WSBT) | [oracle](https://wsbt.com/) | 84 |  |
 | northern_indiana | South Bend Community School Corp | none | 0 | ConnectTimeout: HTTPSConnectionPool(host='www.sbcsc.k12.in.us', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr |
 | northern_indiana | St. Joseph County Government | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.sjcindiana.gov/ |
-| northern_indiana | STAR Financial Bank | [ukg](https://www.starfinancial.com/careers) | 15 |  |
+| northern_indiana | STAR Financial Bank | [ukg](https://www.starfinancial.com/careers) | 14 |  |
 | northern_indiana | Steel Dynamics | [icims](https://www.steeldynamics.com/careersnew/) | 31 |  |
 | northern_indiana | Steel Warehouse | [paylocity](https://www.steelwarehouse.com/about/careers/) | 11 |  |
 | northern_indiana | Supreme Corporation | none | 0 | ConnectTimeout: HTTPSConnectionPool(host='www.supremecorp.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr |
@@ -167,7 +167,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | northern_indiana | Valparaiso University | [page](https://www.valpo.edu/) | 0 |  |
 | northern_indiana | Vera Bradley | [workday](https://verabradley.com/pages/careers) | 0 |  |
 | northern_indiana | Winnebago Industries (Newmar) | [adp](https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=82c90207-af7d-495b-b437-aa9a4c72f4e8&ccId=19000101_000001&type=JS&lang=en_US&selectedMenuKey=CareerCenter) | 42 |  |
-| northern_indiana | Zimmer Biomet | [phenom](zimmerbiomet.com) | 28 |  |
+| northern_indiana | Zimmer Biomet | [phenom](zimmerbiomet.com) | 27 |  |
 | southwest_michigan | Acrisure | [phenom](https://careers.acrisure.com/us/en) | 1 |  |
 | southwest_michigan | Advia Credit Union | [page](https://www.adviacu.org/about/company-profile/careers) | 0 |  |
 | southwest_michigan | Amway | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.amway.com/ |
@@ -191,7 +191,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | southwest_michigan | Lake Michigan Credit Union | [workday](https://www.lmcu.org/about/careers/) | 0 |  |
 | southwest_michigan | LECO Corporation | [adp](https://www.leco.com/careers/) | 27 |  |
 | southwest_michigan | Meijer | none | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.meijer.com/ |
-| southwest_michigan | Michigan Medicine (Ann Arbor) | [page](https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/nursing-opportunities-cs-mott-childrens-hospital) | 2 |  |
+| southwest_michigan | Michigan Medicine (Ann Arbor) | [page](https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/nursing-opportunities-cs-mott-childrens-hospital) | 0 | HTTPError: 403 Client Error: Forbidden for url: https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/n |
 | southwest_michigan | MillerKnoll | [workday](millerknoll.com) | 0 |  |
 | southwest_michigan | Mutually Human | [page](https://www.mutuallyhuman.com/humans/careers/) | 1 |  |
 | southwest_michigan | OST (Open Systems Technologies) | none | 0 | SSLError: HTTPSConnectionPool(host='www.ostusa.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerifi |
@@ -204,7 +204,7 @@ URL into `careers:` in `config/companies.yaml` (or pin `ats:` + its params), and
 | southwest_michigan | Southwestern Michigan College | [page](https://swmich.edu/academics/university-partnerships-and-transfer-opportunities/) | 0 |  |
 | southwest_michigan | SpartanNash | [page](https://careers.cswg.com/) | 0 |  |
 | southwest_michigan | Steelcase | [smartrecruiters](https://www.steelcase.com/about/steelcase/careers/) | 11 |  |
-| southwest_michigan | Stryker | [workday](stryker.com) | 16 |  |
+| southwest_michigan | Stryker | [workday](stryker.com) | 17 |  |
 | southwest_michigan | Vail Rubber Works | [page](https://www.vailrubber.com/about-us/employment) | 0 |  |
 | southwest_michigan | Western Michigan University | [page](https://wmich.edu/career) | 1 |  |
 | southwest_michigan | Whirlpool Corporation | [page](https://www.whirlpoolcareers.com/) | 0 |  |
