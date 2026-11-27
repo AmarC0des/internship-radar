@@ -835,12 +835,10 @@
   "v": 2
  },
  "Michigan Medicine (Ann Arbor)": {
-  "ats": "page",
-  "careers_url": "https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/nursing-opportunities-cs-mott-childrens-hospital",
-  "detected": "2000-01-01",
-  "url": "https://www.uofmhealth.org/our-care/specialty-centers-hospitals/cs-mott-childrens-hospital/nursing-opportunities-cs-mott-childrens-hospital",
-  "v": 2,
-  "vendor": "own-site"
+  "ats": "none",
+  "detected": "2026-11-27",
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.uofmhealth.org/",
+  "v": 2
  },
  "MillerKnoll": {
   "ats": "none",
